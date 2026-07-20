@@ -562,7 +562,7 @@
 
   <h1>TidalCore</h1>
 
-<p><img alt="" src="/assets/images/tidalcore_logo.png" /></p>
+<p><img alt="" src="../../assets/images/tidalcore_logo.png" /></p>
 <p><strong>TidalCore</strong> is the core of the control system, and is responsible for handling shore up-link, CAN communications to the motor controller and battery management system, data logging, fault management, GPS communication, cellular configuration, and much more. All data from the boat originates from TidalCore, and the rest of the control system cannot function without it. </p>
 <p>The goal of this article is to familiarize you with some of the key concepts and ideas, and also provide a context onto why specific choices were made. The actual setup/programming is located at [TODO].</p>
 <div class="admonition tip">
@@ -616,7 +616,7 @@
 <p><a href="https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html">ROSBag</a> is a tool which can record, store, and playback topics and other data interfaces. You simply start the program with a list of which topics you want to record (or record all of them!), and it will simply subscribe to every single topic, and record its data into a <strong>bagfile</strong>. This is a simple, but very powerful tool to log everything on the control system. TidalCore runs a script at startup which starts ROSBag before every node, allowing us to also observe startup behavior. </p>
 <p>ROSBag outputs its file into a <code>.mcap</code> file type, and we upload and analyze these on a platform called <strong>Foxglove</strong>.</p>
 <figure>
-<p><img alt="Foxglove Demo" src="assets/images/screenshots/foxglove.png" /></p>
+<p><img alt="Foxglove Demo" src="../../assets/images/screenshots/foxglove.png" /></p>
 <figcaption>
 <p>We can visualize, graph, and see logs of every single topic!</p>
 </figcaption>
