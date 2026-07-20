@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://stevens-electric-boatworks.github.io/tidal-docs/start-here/tidalcore/">
       
       
+        <link rel="prev" href="../overall-system-design/">
+      
       
       
         
@@ -21,7 +23,7 @@
     
     
       
-        <title>Overall System Design - Tidal Telemetry Documentation</title>
+        <title>Tidal Core Introduction - Tidal Telemetry Documentation</title>
       
     
     
@@ -71,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#nodes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overall System Design
+              Tidal Core Introduction
             
           </span>
         </div>
@@ -190,10 +197,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../welcome/" class="md-tabs__link">
           
   
@@ -226,7 +235,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Tidal Telemetry Documentation" class="md-nav__button md-logo" aria-label="Tidal Telemetry Documentation" data-md-component="logo">
       
@@ -269,24 +280,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -304,7 +320,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -329,7 +345,7 @@
   <span class="md-ellipsis">
     
   
-    Start Here
+    Intro to Tidal Telemetry
   
 
     
@@ -371,6 +387,155 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TidalCore
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TidalCore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topics-publishers-subscribers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topics, Publishers, Subscribers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Topics, Publishers, Subscribers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Test" Nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playback
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -385,22 +550,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -411,9 +560,82 @@
 
 
 
-  <h1>Overall System Design</h1>
+  <h1>TidalCore</h1>
 
-
+<p><img alt="" src="assets/images/tidalcore_logo.png" /></p>
+<p><strong>TidalCore</strong> is the core of the control system, and is responsible for handling shore up-link, CAN communications to the motor controller and battery management system, data logging, fault management, GPS communication, cellular configuration, and much more. All data from the boat originates from TidalCore, and the rest of the control system cannot function without it. </p>
+<p>The goal of this article is to familiarize you with some of the key concepts and ideas, and also provide a context onto why specific choices were made. The actual setup/programming is located at [TODO].</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This documentation mirrors the official ROS2 documentation about its architecture (duh, since we use ROS2). It is a good idea to <a href="https://docs.ros.org/en/kilted/Concepts/Basic.html">read the official documentation</a> on its basic concepts along with this one. You will be using ROS2 a lot, so it is best to get used to reading its documentation early.</p>
+</div>
+<h2 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h2>
+<p>TidalCore is built with a distributed architecture that prevents single points of failures. This means that even if there is a single bad node which crashes, it does not result in the entire failure of the entire control system, a strict requirement for a system which cannot be easily debugged or rebooted once in the field (or the water). </p>
+<p>This also drives our choice to use ROS2 (Robot Operating System). ROS2 works in a node architecture, which means that each portion of the control system (CAN communication, GPS, shore up-link, etc), are all separate "nodes" or processes. What this means is that if there is a failure in one node (e.g, a parsing bug in the GPS node results in a crash), it will not affect the other portions of the control system, such as CAN communication, shore up-link, etc. This is a much more robust design compared to a monolithic structure, where all of the code is sitting inside 1 process, and any failure in any part of the code will result in a full control system failure. </p>
+<p>TidalCore currently has the following nodes:</p>
+<ul>
+<li><strong>shore_comms</strong>/<strong>shore_comms_cpp</strong> - Ingests data from the other nodes and sends it to the shore system</li>
+<li><strong>cell_node</strong> - Handles the configuration of the cellular hat and monitors the connection quality</li>
+<li><strong>motion_node</strong> - Parses the NMEA strings from the SixFab GPS module from serial USB</li>
+<li><strong>alarms_manager_node</strong> - Maintains list of active faults from internal database and handles raising and resolution of faults</li>
+<li><strong>can_node</strong>/<strong>can_node_cpp</strong> - Communicates with the battery management system about current battery state, and receives CANOpen messages from both motor controllers</li>
+<li><strong>sys_util_node</strong> - Monitors system utilization such as CPU usage, RAM, storage, etc</li>
+<li><strong>time_node</strong> - Maintains a running clock for convenience purposes </li>
+</ul>
+<p>Of these, the most important one is the <strong>can_node</strong>, since it manages the entire CAN subsystem, and has the most important information. Even if we lose the rest of the control system, the can node can function on its own, and it is critical that we be able to get data from it at all times.</p>
+<h2 id="topics-publishers-subscribers">Topics, Publishers, Subscribers<a class="headerlink" href="#topics-publishers-subscribers" title="Permanent link">&para;</a></h2>
+<p>We now know that each node is an independent process, but how do nodes actually communicate with one another? In a typical program, you may have a class or object which holds this data, and can be read at any time, but it is not so simple when each node is an independent process. To facilitate data transfer, we use <strong>publishers and subscribers</strong> who write/read data from a <strong>topic</strong>.</p>
+<p>A <strong>topic</strong> represents a data stream, which can be identified through a string. For example, we have topics such as <code>/motors/motorA</code>, <code>/bms/cell_voltage</code>, etc. You can think of nodes as places where data is actually exchanged, and nodes listen and write to topics in order to exchange data. Publishers and subscribers each write and read data that are in a topic. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>We have created a topic called called <code>/motors/motorA</code> (don't worry about the specifics). We will now have the <code>can_node</code> create a <strong>publisher</strong> for the topic, and we will have <code>shore_comms</code> create a <strong>subscriber</strong> for the topic. </p>
+<p>Now, whenever the <code>can_node</code> recieves data from the motor controller, it will publish that data onto the topic. The <code>shore_comms</code> has a subscriber which is listening in for any data in the stream, and it therefore gets the data. It can now send that data to the shore system.</p>
+</div>
+<p>What makes this especially familizrepowerful is that you can have many subscribers and publishers. This is great for having 1 node publish data that multiple nodes may need, or having multiple nodes publish to a shared topic.</p>
+<p>In our code, we typically only have 1 node publishing (e.g, <code>can_node</code> publishing motor controller data), and lots of subscribers (e.g, <code>shore_comms</code> subscribes to many topics in order to forward it to the shore system).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>There do exist other types of data interfaces (such as services and actions), but these are not used as commonly as publishers/subscribers, and it is recommended to read about them more in depth on the ROS documentation linked above.</p>
+</div>
+<h3 id="test-nodes">"Test" Nodes<a class="headerlink" href="#test-nodes" title="Permanent link">&para;</a></h3>
+<p>However, another feature of topics is that the subscriber does not actually care where the data is coming from. In our example, <code>shore_comms</code> doesn't know, nor care that the data originally came from the <code>can_node</code>. All that matters is that there is data in the topic. </p>
+<p>We can use this to our advantage. Let's say that we are developing a new dashboard that reads data directly from the topics, but we don't have access to the real hardware. We would want to send fake data to test our dashboard, but it would normally require us to modify the real code to check if we are in a "testing" condition, and just send fake data, for example:
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_testing</span><span class="p">:</span>
+    <span class="n">send_fake_data</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">init_real_hardware</span><span class="p">()</span> <span class="c1"># Will cause an error/crash if we don&#39;t have the hardware!!!</span>
+<span class="o">...</span>
+</code></pre></div></p>
+<p>This is quite annoying, since we now add a very consequential code path in an important part of the program. </p>
+<p>Here is what we do <strong>instead</strong>:</p>
+<p>We can create a fake "test node", whose only job is to send fake test data. Now, when we are testing the dashboard, instead of starting the "real" node, we start our test one instead. The test node will now send fake data, but our dashboard can't tell the difference. In this way, if I know it works with the test data, I can also for know for certain that it will also work with the real node connected to real hardware.</p>
+<p>This is a pattern that you will see in many of the nodes. For example, <code>can_node</code> has a <code>can_node_test</code> which sends fake motor data (such as voltage, current, etc.) which we can use to validate our <code>shore_comms</code> node, TidalView (driver dashboard), etc. </p>
+<h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
+<p>We can now receive and send data between nodes and to the shore system. However, what good is data if we can never see it again? That is where <strong>logging</strong> comes in, and thankfully for us, we have a very important tool already created to work in the ROS ecosystem.</p>
+<p><a href="https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html">ROSBag</a> is a tool which can record, store, and playback topics and other data interfaces. You simply start the program with a list of which topics you want to record (or record all of them!), and it will simply subscribe to every single topic, and record its data into a <strong>bagfile</strong>. This is a simple, but very powerful tool to log everything on the control system. TidalCore runs a script at startup which starts ROSBag before every node, allowing us to also observe startup behavior. </p>
+<p>ROSBag outputs its file into a <code>.mcap</code> file type, and we upload and analyze these on a platform called <strong>Foxglove</strong>.</p>
+<figure>
+<p><img alt="Foxglove Demo" src="assets/images/screenshots/foxglove.png" /></p>
+<figcaption>
+<p>We can visualize, graph, and see logs of every single topic!</p>
+</figcaption>
+</figure>
+<h3 id="playback">Playback<a class="headerlink" href="#playback" title="Permanent link">&para;</a></h3>
+<p>Playback of ROS2 bagfiles allow us to replay the control system in real-time based on historical data. Here a few examples of how it can be used:</p>
+<ul>
+<li>You have a math error in a function which takes in data from other parts of the control system. By replaying the inputs to that nodes, you can debug the function and figure out why the output is incorrect</li>
+<li>You can replay every topic and only start TidalShore and TidalView, which can allow you to visualize what happened in real-time from either the shore or drivers perspective</li>
+<li>Create new data based on old ROS data (such as applying filtering to some sensor data), and compare the results of before and after</li>
+</ul>
+<p>Playback is typically less utilized compared to recording, since we now use Foxglove for analysis, but it still shows the potential of such a tool.</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Node</strong> - a single process that performs the actions for some subsystem, e.g, CAN communication. They can run independently and should have minimal dependencies (or gracefully adjust if a dependency dies)</li>
+<li><strong>Topic</strong> - An identifiable data stream which you can either write or listen to</li>
+<li><strong>Publisher</strong> - Publishes (or writes) data to a specific topic</li>
+<li><strong>Subscriber</strong> - Subscribes to (or listens) for data from a specific topic</li>
+</ul>
 
 
 
@@ -441,6 +663,28 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../overall-system-design/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overall System Design">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overall System Design
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -506,7 +750,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.footer", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
