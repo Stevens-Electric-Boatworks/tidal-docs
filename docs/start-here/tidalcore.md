@@ -3,7 +3,7 @@ title: Tidal Core Introduction
 ---
 
 
-![](assets/images/tidalcore_logo.png)
+![](../assets/images/tidalcore_logo.png)
 
 
 **TidalCore** is the core of the control system, and is responsible for handling shore up-link, CAN communications to the motor controller and battery management system, data logging, fault management, GPS communication, cellular configuration, and much more. All data from the boat originates from TidalCore, and the rest of the control system cannot function without it. 
@@ -79,7 +79,7 @@ We can now receive and send data between nodes and to the shore system. However,
 
 ROSBag outputs its file into a `.mcap` file type, and we upload and analyze these on a platform called **Foxglove**.
 
-![Foxglove Demo](assets/images/screenshots/foxglove.png)
+![Foxglove Demo](../assets/images/screenshots/foxglove.png)
 ///caption
 We can visualize, graph, and see logs of every single topic!
 ///

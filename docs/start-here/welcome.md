@@ -23,5 +23,5 @@ The project tech stack consists of as follows:
 
 Each of these form a critical component of the tech stack, and basic knowledge should be known about all parts of the tech stack to be successful.
 
-To get started, continue reading more about the overall system design, as well as the specific subsystems of each part of stack.
+To get started, continue reading more about the overall system design, as well as about each of the 3 main projects.
 
