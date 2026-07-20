@@ -1,9 +1,13 @@
 site_name: Tidal Telemetry Documentation
+site_url: https://stevens-electric-boatworks.github.io/tidal-docs/
 theme:
   name: material
   features:
     - navigation.tabs
     - navigation.footer
+    - toc.integrate
+    - toc.follow  
+
   palette:
     primary: custom
     accent: custom 
@@ -14,6 +18,14 @@ theme:
   favicon: assets/images/logo.png
 extra_css:
   - stylesheets/extra.css
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
 
 extra:
   social:
@@ -28,6 +40,6 @@ extra:
 nav:
   - Home: index.md
   - Start Here:
-    - Start Here: start-here/welcome.md
+    - Intro to Tidal Telemetry: start-here/welcome.md
     - Overall System Design: start-here/overall-system-design.md
-    
+    - TidalCore: start-here/tidalcore.md

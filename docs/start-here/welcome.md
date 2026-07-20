@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: Intro to Tidal Telemetry
 ---
 
 # Welcome to Tidal Telemetry
@@ -12,7 +12,6 @@ The 3 core projects are:
 * **TidalShore** - The web based shore monitoring system which provides easy access to all data, server-side redundant data logging, downloading, and parsing, as log files
 * **TidalView** - The driver dashboard which runs directly on the boat, giving the driver mission critical information about the boat's systems, as well as providing diagnostics tools when a cellular connection to TidalShore isn't available
  
-
 
 The project tech stack consists of as follows:
 

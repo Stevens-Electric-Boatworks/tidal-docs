@@ -8,7 +8,7 @@ social:
 # Tidal Telemetery
 
 
-![](/assets/images/stevenseboat_logo.png) 
+![](assets/images/stevenseboat_logo.png) 
 
 ([Website](https://stevenseboat.org/) | [Support Us ❤️](https://stevenseboat.org/support-us) | [Instagram](https://www.instagram.com/stevenseboat/) | [LinkedIn](https://www.linkedin.com/company/stevenseboat/) | [Join Us!](https://ducklink.stevens.edu/sname/home/))
 # About Us
