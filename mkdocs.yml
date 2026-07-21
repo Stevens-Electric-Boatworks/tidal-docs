@@ -38,8 +38,11 @@ extra:
     
     
 nav:
-  - Home: index.md
+  - Home:
+    - Introduction: index.md
+    - Features: features.md
   - Start Here:
     - Intro to Tidal Telemetry: start-here/welcome.md
     - Overall System Design: start-here/overall-system-design.md
     - TidalCore: start-here/tidalcore.md
+    - TidalView: start-here/tidalview.md
