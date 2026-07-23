@@ -16,6 +16,7 @@ theme:
     text: Inter
   logo: assets/images/logo.png
   favicon: assets/images/logo.png
+  custom_dir: overrides
 extra_css:
   - stylesheets/extra.css
 
@@ -35,7 +36,7 @@ extra:
       link: https://www.instagram.com/stevenseboat
     - icon: fontawesome/brands/github
       link: https://github.com/Stevens-Electric-Boatworks
-    
+  
     
 nav:
   - Home:
@@ -46,3 +47,5 @@ nav:
     - Overall System Design: start-here/overall-system-design.md
     - TidalCore: start-here/tidalcore.md
     - TidalView: start-here/tidalview.md
+  - TidalCore:
+    - Networking Configuration: tidalcore/networking-configuration.md

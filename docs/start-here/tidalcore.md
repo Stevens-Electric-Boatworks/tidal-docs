@@ -1,5 +1,6 @@
 ---
 title: Tidal Core Introduction
+author: Ishaan Sayal
 ---
 
 

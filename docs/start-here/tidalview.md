@@ -1,5 +1,6 @@
 ---
 title: Overall System Design
+author: Ishaan Sayal
 ---
 ![](../assets/images/screenshots/tidalview.png)
 
