@@ -50,3 +50,7 @@ nav:
   - TidalCore:
     - CAN Bus: tidalcore/can-bus.md
     - Networking Configuration: tidalcore/networking-configuration.md
+    - Shore Communication Protocol (TODO): tidalcore/shore-protocol.md
+    - Fault Management System (TODO): tidalcore/fault-management-system.md
+    - Deploying Code Remotely (TODO): tidalcore/deploying-code.md
+    - Data Recording (TODO): tidalcore/data-recording.md
