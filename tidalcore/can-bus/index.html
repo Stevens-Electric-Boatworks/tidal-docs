@@ -7,12 +7,16 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="Thiago Andrade">
+        <meta name="author" content="Ishaan Sayal">
       
       
-        <link rel="canonical" href="https://stevens-electric-boatworks.github.io/tidal-docs/start-here/tidalshore/">
+        <link rel="canonical" href="https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/can-bus/">
       
       
+        <link rel="prev" href="../../start-here/tidalview/">
+      
+      
+        <link rel="next" href="../networking-configuration/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>Overall System Design - Tidal Telemetry Documentation</title>
+        <title>CAN Bus Configuration - Tidal Telemetry Documentation</title>
       
     
     
@@ -73,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#linux-can-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overall System Design
+              CAN Bus Configuration
             
           </span>
         </div>
@@ -197,7 +206,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../welcome/" class="md-tabs__link">
+        <a href="../../start-here/welcome/" class="md-tabs__link">
           
   
   
@@ -213,11 +222,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tidalcore/can-bus/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -433,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../welcome/" class="md-nav__link">
+      <a href="../../start-here/welcome/" class="md-nav__link">
         
   
   
@@ -461,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overall-system-design/" class="md-nav__link">
+      <a href="../../start-here/overall-system-design/" class="md-nav__link">
         
   
   
@@ -489,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tidalcore/" class="md-nav__link">
+      <a href="../../start-here/tidalcore/" class="md-nav__link">
         
   
   
@@ -517,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tidalview/" class="md-nav__link">
+      <a href="../../start-here/tidalview/" class="md-nav__link">
         
   
   
@@ -549,24 +560,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -584,7 +600,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -599,10 +615,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../tidalcore/can-bus/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN Bus
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -618,6 +659,124 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux-can-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux CAN Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kvaser-adapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kvaser Adapter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kvaser Adapter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kvaser-led-reference-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kvaser LED Reference Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inmotion-can-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inmotion CAN Protocol
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inmotion CAN Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motor-controller-fault-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor Controller Fault Reading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inmotion-object-dictionary-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inmotion Object Dictionary Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-management-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery Management System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-cooling-temperature-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAN Cooling Temperature Sensors
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -630,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tidalcore/networking-configuration/" class="md-nav__link">
+      <a href="../networking-configuration/" class="md-nav__link">
         
   
   
@@ -676,7 +835,7 @@
   
     <div class="md-author-meta" style="margin-bottom: 1em; font-size: 0.9 5em; color: var(--md-default-fg-color);">
         
-          Author: Thiago Andrade
+          Author: Ishaan Sayal
         
         </div>
   
@@ -687,9 +846,155 @@
 
 
 
-  <h1>Overall System Design</h1>
+  <h1>CAN Bus</h1>
 
+<p>TidalCore uses a <a href="https://www.csselectronics.com/pages/can-bus-simple-intro-tutorial">CAN Bus</a> to be able to communicate with several control system components, which are the motor controllers, battery management system, and temperature sensors connected to the cooling loop. </p>
+<p>There are a few different components which allow us to use the CAN Bus:</p>
+<ul>
+<li>The <a href="https://kvaser.com/product/kvaser-u100/">Kvaser USB to CAN Adapter</a></li>
+<li>Linux <a href="https://docs.kernel.org/networking/can.html">SocketCAN</a></li>
+<li><code>can_node</code></li>
+</ul>
+<p>The following devices are connected to the CAN Bus:</p>
+<ul>
+<li>2 Inmotion ACS Inverters (Motor Controllers)<ul>
+<li>These are the only devices which communicate using <a href="https://www.csselectronics.com/pages/canopen-tutorial-simple-intro">CANOpen</a></li>
+</ul>
+</li>
+<li>Battery Management System</li>
+<li>Cooling Temperature Sensor</li>
+</ul>
+<h2 id="linux-can-configuration">Linux CAN Configuration<a class="headerlink" href="#linux-can-configuration" title="Permanent link">&para;</a></h2>
+<p>Linux already has support for CAN built into the kernel, which means that all we have to do is enable the CAN implementation for the specific USB device. When we plug in the Kvaser can adapter into the Controls PC, we want it to automatically enable and be brought up. </p>
+<p>To do this, we will create a <code>udev</code> rule by creating and opening a file at <code>/etc/udev/rules.d/80-can.rules</code>:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/udev/rules.d/80-can.rules
+sudo<span class="w"> </span>vim<span class="w"> </span>/etc/udev/rules.d/80-can.rules
+</code></pre></div>
+<p>We will then put inside of the file:
+<div class="highlight"><pre><span></span><code>SUBSYSTEM==&quot;net&quot;, ACTION==&quot;add&quot;, KERNEL==&quot;can*&quot;, TAG+=&quot;systemd&quot;, RUN+=&quot;/bin/systemd-run --no-block /usr/local/bin/setup-can.sh %k&quot;
+</code></pre></div></p>
+<p>This will run a script whenever a CAN adapter is detected by the kernel. We will now create a script for this at <code>/usr/local/bin/setup-can.sh</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">IFACE</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+sleep<span class="w"> </span><span class="m">1</span>
+ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IFACE</span><span class="s2">&quot;</span><span class="w"> </span>down
+ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IFACE</span><span class="s2">&quot;</span><span class="w"> </span>up<span class="w"> </span><span class="nb">type</span><span class="w"> </span>can<span class="w"> </span>bitrate<span class="w"> </span><span class="m">500000</span>
+</code></pre></div>
+<p>This configures the CAN bus to run at a bitrate of 500 kbps.</p>
+<h2 id="kvaser-adapter">Kvaser Adapter<a class="headerlink" href="#kvaser-adapter" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/images/screenshots/can/kvaser.png" /></p>
+<p>The Kvaser adapter also has a set of LED's on the front which shows the configuration state. A reference table is provided:</p>
+<h3 id="kvaser-led-reference-table">Kvaser LED Reference Table<a class="headerlink" href="#kvaser-led-reference-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Status Area</th>
+<th>LED Bar</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power is on</td>
+<td>On (White)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Waiting for USB Configuration</td>
+<td>Fast blink (Blue)</td>
+<td></td>
+<td><em>If stuck on this step, that means that the <code>udev</code> rule configuration was unsuccessful. Check <code>dmesg</code> logs</em></td>
+</tr>
+<tr>
+<td>CAN Channel On</td>
+<td>On (Green)</td>
+<td></td>
+<td><em>Successful USB device configuration, but no traffic</em></td>
+</tr>
+<tr>
+<td>CAN Channel Traffic</td>
+<td>On (Yellow)</td>
+<td>Dynamic (Yellow)</td>
+<td><em>The length of the LED will scale depending on bus traffic and usage</em></td>
+</tr>
+<tr>
+<td>Error Frame</td>
+<td></td>
+<td>Dynamic (Red)</td>
+<td></td>
+</tr>
+<tr>
+<td>CAN Channel is Error (Passive)</td>
+<td>Fast Blink (Red)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CAN Overrrun</td>
+<td>On (Red)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Firmware Update</td>
+<td>Slow Blink (Blue)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Locate Hardware</td>
+<td>Slow Blink (White)</td>
+<td>Slow Blink (White)</td>
+<td><em>This can only be triggered using Kvaser's CAN library, which we do not use</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="inmotion-can-protocol">Inmotion CAN Protocol<a class="headerlink" href="#inmotion-can-protocol" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>We are still working on understanding the CAN protocol for the Inmotion motor controllers. Certain features, such as PDOs, are not included here.</p>
+</div>
+<p>Communication with the Inmotion motor controllers happens using CANOpen, a protocol built on top of CAN which allows for much more advanced communication between two devices. </p>
+<p>The primary way to get data from the motor controller is to use a <strong>Service Data Object (SDO)</strong>. To get data from the motor, we send an SDO with an <strong>index</strong> and <strong>sub-index</strong>. To figure which ones we need, we took at an object dictionary file, which describes all of the data we can get via an SDO, and the specific indexes needed to retrieve them.</p>
+<p>We will use the syntax <code>index:subindex</code> to represent an SDO read. For example, index <code>0x1002</code> sub-index <code>3</code> will be called <code>0x1002:3</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>If we want to get the voltage, we would go into the object dictionary file and find that it is located at index <code>0x2030</code>, at sub-index <code>2</code> with a factor of <code>0.01</code> (meaning we need to do <code>value * 0.01</code> to get the real number). You can find these indexes in the object dictionary reference below.</p>
+</div>
+<p>We perform these actions multiple times per second using the python <code>canopen</code> library, which provides API access to request SDO's.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is highly recommended to read more into the CANOpen standard, specifically about how SDO's are communicated, PDO's, and the overall node structure of a CAN bus. We mix both CAN and CANOpen on the same bus.</p>
+</div>
+<h3 id="motor-controller-fault-reading">Motor Controller Fault Reading<a class="headerlink" href="#motor-controller-fault-reading" title="Permanent link">&para;</a></h3>
+<p>In order to read faults from the motor controller, we need to perform multiple SDO requests, and then compare it to a table provided in the object dictionary (which we have replicated in our own <code>faults.csv</code> file in the TidalCore code repo).</p>
+<p>In order to get the faults, we first send an SDO read request at <code>0x3011:0</code>. This will trigger the controller to update the list of active events. We will then read <code>0x3011:1</code>, which will return an array of event-ids. These event-id's are correlated to a list of emergency error codes, which we can search up in the provided object dictionary reference (provided below)</p>
+<p>Each event-id is unique, but it is paired with an emergency code, which is not unique (not sure why), which we we include in our <code>faults.csv</code> database which is a part of the TidalCore code repo. </p>
+<h3 id="inmotion-object-dictionary-reference">Inmotion Object Dictionary Reference<a class="headerlink" href="#inmotion-object-dictionary-reference" title="Permanent link">&para;</a></h3>
+<iframe src="../../assets/docs/inmotion-object-dictionary.html" width="150%" height="800px" style="border:none;"></iframe>
 
+<h2 id="battery-management-system">Battery Management System<a class="headerlink" href="#battery-management-system" title="Permanent link">&para;</a></h2>
+<p>The battery management system (BMS) does <strong>not</strong> use CANOpen. Instead, CAN messages are split into different sections, and depending on what kind of header it is, we interpret the rest of the sections differently. </p>
+<p>We will receive 8 bytes from the battery management system. Then, depending on the value of byte 0 (<code>B0</code>), it will tell us what kind of data it is, and how to interpret the rest of the data.</p>
+<figure>
+<p><img alt="" src="../../assets/images/screenshots/can/bms_protocol.png" /></p>
+<figcaption>
+<p>A handy table which will show you how to interpret the results.</p>
+</figcaption>
+</figure>
+<p>For example, if the first byte in the byte array is <code>0x02</code>, then we know that index 2 and 3 combined will give us the pack voltage. We can then get the integer value with the following code:
+<div class="highlight"><pre><span></span><code><span class="n">pack_voltage_raw</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;little&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">/</span> <span class="mf">10.0</span> 
+<span class="c1"># Divide by 10 since only integers can be sent, so we have to perform the conversion ourselves</span>
+</code></pre></div></p>
+<p>All numbers transmitted are little-endian. </p>
+<p>However, the BMS does not send the data by itself. We have to prompt it to send the data. We can do this by transmitting a CAN message with an ID of <code>0x313</code> with the data <code>[0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01]</code>. Each index represents a kind of a data that we want transmitted, and since we want everything, we use <code>0x01</code> on everything.</p>
+<h2 id="can-cooling-temperature-sensors">CAN Cooling Temperature Sensors<a class="headerlink" href="#can-cooling-temperature-sensors" title="Permanent link">&para;</a></h2>
+<p>The cooling temp sensors are custom PCB's which have a thermistor attached to them, which transmit their detected temperature over the CAN bus. </p>
+<p>Each CAN message sent is send with a CAN arbitration ID of <code>0xbe</code> and can be decoded by doing the following:</p>
+<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;little&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span>
+</code></pre></div>
 
 
 
@@ -718,6 +1023,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../start-here/tidalview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TidalView">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                TidalView
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../networking-configuration/" class="md-footer__link md-footer__link--next" aria-label="Next: Networking Configuration">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Networking Configuration
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
