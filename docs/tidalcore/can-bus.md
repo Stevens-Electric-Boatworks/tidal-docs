@@ -117,6 +117,10 @@ All numbers transmitted are little-endian.
 
 However, the BMS does not send the data by itself. We have to prompt it to send the data. We can do this by transmitting a CAN message with an ID of `0x313` with the data `[0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01]`. Each index represents a kind of a data that we want transmitted, and since we want everything, we use `0x01` on everything.
 
+### BMS User Guide
+
+<object data="../../assets/docs/bms_user_guide.pdf" type="application/pdf" width="75%" height="900px"> <p>Your browser does not support PDFs. <a href="../../assets/docs/bms_user_guide.pdf">Download the BMS User Guide PDF instead</a>. </p> </object>
+
 ## CAN Cooling Temperature Sensors
 
 The cooling temp sensors are custom PCB's which have a thermistor attached to them, which transmit their detected temperature over the CAN bus. 
