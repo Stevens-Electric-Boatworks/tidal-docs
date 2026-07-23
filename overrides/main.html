@@ -6,7 +6,7 @@
   {% if page.meta.authors or page.meta.author %}
     <div class="md-author-meta" style="margin-bottom: 1em; font-size: 0.9 5em; color: var(--md-default-fg-color);">
         {% if page.meta.authors %}
-          Authors: {{ page.meta.authors | join(', ') }}
+          Authors: {{ page.meta.authors}}
         {% else %}
           Author: {{ page.meta.author }}
         {% endif %}

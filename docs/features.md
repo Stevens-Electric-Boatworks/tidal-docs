@@ -1,5 +1,6 @@
 ---
 title: Features
+authors: Ishaan Sayal & Thiago Andrade
 ---
 # Feature List
 
