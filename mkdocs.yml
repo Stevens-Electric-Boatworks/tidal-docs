@@ -48,4 +48,5 @@ nav:
     - TidalCore: start-here/tidalcore.md
     - TidalView: start-here/tidalview.md
   - TidalCore:
+    - CAN Bus: tidalcore/can-bus.md
     - Networking Configuration: tidalcore/networking-configuration.md
