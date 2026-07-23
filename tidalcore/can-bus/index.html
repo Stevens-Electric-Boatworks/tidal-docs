@@ -760,6 +760,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Battery Management System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bms-user-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BMS User Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -990,6 +1007,9 @@ ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span
 </code></pre></div></p>
 <p>All numbers transmitted are little-endian. </p>
 <p>However, the BMS does not send the data by itself. We have to prompt it to send the data. We can do this by transmitting a CAN message with an ID of <code>0x313</code> with the data <code>[0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01]</code>. Each index represents a kind of a data that we want transmitted, and since we want everything, we use <code>0x01</code> on everything.</p>
+<h3 id="bms-user-guide">BMS User Guide<a class="headerlink" href="#bms-user-guide" title="Permanent link">&para;</a></h3>
+<object data="../../assets/docs/bms_user_guide.pdf" type="application/pdf" width="75%" height="900px"> <p>Your browser does not support PDFs. <a href="../../assets/docs/bms_user_guide.pdf">Download the BMS User Guide PDF instead</a>. </p> </object>
+
 <h2 id="can-cooling-temperature-sensors">CAN Cooling Temperature Sensors<a class="headerlink" href="#can-cooling-temperature-sensors" title="Permanent link">&para;</a></h2>
 <p>The cooling temp sensors are custom PCB's which have a thermistor attached to them, which transmit their detected temperature over the CAN bus. </p>
 <p>Each CAN message sent is send with a CAN arbitration ID of <code>0xbe</code> and can be decoded by doing the following:</p>
