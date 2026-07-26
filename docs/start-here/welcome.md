@@ -1,5 +1,6 @@
 ---
 title: Intro to Tidal Telemetry
+author: Ishaan Sayal
 ---
 
 # Welcome to Tidal Telemetry
