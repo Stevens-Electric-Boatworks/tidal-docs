@@ -2,6 +2,8 @@
 title: Developer Environment Prerequisites
 author: Ishaan Sayal
 ---
+!!! info
+	All the software that we use is version controlled on GitHub. As such, you should have a working idea of how Git and GitHub work, and should ensure that they are setup with your credentials on whatever platform/OS you use.
 ## TidalCore
 
 !!! tip

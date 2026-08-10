@@ -27,6 +27,11 @@ extra_css:
 watch:
   - includes
 
+plugins:
+  - search
+  - open-in-new-tab:
+     add_icon: true
+
 markdown_extensions:
   - toc:
       permalink: true
@@ -64,6 +69,7 @@ nav:
     - TidalView: intro/tidalview.md
   - Developer Setup:
     - Prerequisites: dev-setup/prerequisites.md
+    - TidalCore: dev-setup/tidalcore.md
   - TidalCore:
     - CAN Bus: tidalcore/can-bus.md
     - Networking Configuration: tidalcore/networking-configuration.md
@@ -71,4 +77,11 @@ nav:
     - Fault Management System (TODO): tidalcore/fault-management-system.md
     - Deploying Code Remotely (TODO): tidalcore/deploying-code.md
     - Data Recording (TODO): tidalcore/data-recording.md
+  - TidalShore:
+    - TODO: todo
+  - TidalView:
+    - TODO: todo
+  - Website: https://stevenseboat.org
+  - GitHub: https://github.com/Stevens-Electric-Boatworks
+  - ROS Documenation: https://docs.ros.org/en/kilted/Tutorials.html
   
