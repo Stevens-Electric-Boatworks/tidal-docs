@@ -41,9 +41,14 @@ markdown_extensions:
   - pymdownx.blocks.caption
   - abbr
   - attr_list
+  - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
@@ -81,7 +86,7 @@ nav:
     - TODO: todo
   - TidalView:
     - TODO: todo
-  - Website: https://stevenseboat.org
-  - GitHub: https://github.com/Stevens-Electric-Boatworks
-  - ROS Documenation: https://docs.ros.org/en/kilted/Tutorials.html
+  - Website ↗: https://stevenseboat.org
+  - GitHub ↗: https://github.com/Stevens-Electric-Boatworks
+  - ROS Documenation ↗: https://docs.ros.org/en/kilted/Tutorials.html
   

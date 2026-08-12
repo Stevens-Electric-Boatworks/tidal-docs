@@ -8,6 +8,9 @@ author: Ishaan Sayal
 
 ## Step 1: ROS Install
 
+!!! info
+	Make sure that if you are using Linux, that you are entering the container by running `toolbox enter ros`, so the installation happens inside of the container, and this must be done for every new terminal session.
+
 This first step will involve installing ROS2 Kilted Kaiju. You should follow the steps outlined on their documentation, which can be found [here](https://docs.ros.org/en/kilted/Installation/Ubuntu-Install-Debs.html). More specifically, you need to follow the follow steps on their page. Keep in the following details:
 
 * Install ROS2 development tools
@@ -158,8 +161,137 @@ Unfortunately, setting up your IDE can be quite complicated depending on which e
 There are 2 IDE's which we recommend you use, JetBrains IDE's (PyCharm & CLion), and VSCode with the `clangd` language server.
 
 In order for any of the IDE's to work, we need to make sure that we start the IDE from a **ROS sourced** environment. This will allow the IDE to be able to see the ROS packages, libraries, etc. needed to actually develop. Therefore, all of these different configurations 
-### JetBrains
 
-#### Windows
+=== "JetBrains"
 
-The recommended setup here is to use 
+	=== "Linux"
+		!!! note
+			This is for if you are running Linux as your MAIN OS, not if you are running WSL on Windows. There are separate instructions for Ubuntu specifically.
+	
+		In order for the Jetbrains IDE to be able to recognize the sourced environment, we will need to run the IDE executable whilst inside of the container. 
+		
+		To get started, we recommend using [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) along with the [Jetbrains Student Developer Pack](https://www.jetbrains.com/academy/student-pack/). Once installed and running, you need to go to `Settings` -> `Tools` -> `Generate Shell Scripts`, and enable that option. 
+		
+		You can now install PyCharm (Python IDE) or CLion (C++ IDE). Once they are done installing, start a new terminal instance, and ensure that you can start the IDE by running:
+		```bash title="bash"
+		pycharm
+		```
+		or
+		```bash title="bash"
+		clion
+		```
+		
+		If the IDE has successfully started, close the IDE if you haven't already. 
+		
+		
+		The next steps **have to be performed every time you want to open the IDE**. First, enter the toolbox/container by running:
+		```bash title="bash"
+		toolbox enter ros
+		```
+		
+		Then, source the ROS workspace by doing either:
+		```bash title="bash"
+		cd ~/eboat_src/ros_ws/ && source install/setup.bash
+		```
+		
+		or, if you set it up following the optional instructions:
+		```bash title="Terminal"
+		ros
+		```
+		
+		Finally, start the IDE by running either the  `clion` or `pycharm` commands. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. 
+	
+	
+	=== "Ubuntu"
+	
+	
+		In order for the Jetbrains IDE to be able to recognize the sourced environment, we will need to run the IDE executable whilst we have a sourced terminal environment. 
+		
+		To get started, we recommend using [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) along with the [Jetbrains Student Developer Pack](https://www.jetbrains.com/academy/student-pack/). Once installed and running, you need to go to `Settings` -> `Tools` -> `Generate Shell Scripts`, and enable that option. 
+		
+		You can now install PyCharm (Python IDE) or CLion (C++ IDE). Once they are done installing, start a new terminal instance, and ensure that you can start the IDE by running:
+		```bash title="bash"
+		pycharm
+		```
+		or
+		```bash title="bash"
+		clion
+		```
+		
+		If the IDE has successfully started, close the IDE if you haven't already. 
+		
+		The next steps **have to be performed every time you want to open the IDE**. First, source the ROS workspace by doing either:
+		```bash title="bash"
+		cd ~/eboat_src/ros_ws/ && source install/setup.bash
+		```
+		
+		or, if you set it up following the optional instructions:
+		```bash title="Terminal"
+		ros
+		```
+		
+		Finally, start the IDE by running either the  `clion` or `pycharm` commands. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. 
+
+=== "VSCode"
+
+	=== "Linux"
+		!!! note
+			This is for if you are running Linux as your MAIN OS, not if you are running WSL on Windows. There are separate instructions for Ubuntu specifically.
+				
+		You will first need to install VSCode. This can either be done by installing it using Flatpak, or your distributions package manager. Once installed, you should be able to run:
+		```bash title="bash"
+		code
+		```
+		
+		You should now install the following extensions for VSCode:
+		
+		* C/C++ Extension Pack
+		* Python Extension Pack
+		* Pylance
+		* clangd
+			* It may prompt you to install the `clangd` language server. 
+		
+		The next steps **have to be performed every time you want to open the IDE**. First, enter the toolbox/container by running:
+		```bash title="bash"
+		toolbox enter ros
+		```
+		
+		Then, source the ROS workspace by doing either:
+		```bash title="bash"
+		cd ~/eboat_src/ros_ws/ && source install/setup.bash
+		```
+		
+		or, if you set it up following the optional instructions:
+		```bash title="Terminal"
+		ros
+		```
+		
+		Finally, start the IDE by running the `code` command. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. 
+
+	=== "Ubuntu"
+		You will first need to install VSCode. This can either be done by installing it using Flatpak, or your distributions package manager. Once installed, you should be able to run:
+		```bash title="bash"
+		code
+		```
+		
+		You should now install the following extensions for VSCode:
+		
+		* C/C++ Extension Pack
+		* Python Extension Pack
+		* Pylance
+		* clangd
+			* It may prompt you to install the `clangd` language server.
+		
+		The next steps **have to be performed every time you want to open the IDE**. First, source the environment by running:
+		```bash title="Terminal"
+		cd ~/eboat_src/ros_ws/ && source install/setup.bash
+		```
+		
+		or, if you set it up following the optional instructions:
+		```bash title="Terminal"
+		ros
+		```
+		
+		Finally, start the IDE by running the `code` command. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. 
+
+
