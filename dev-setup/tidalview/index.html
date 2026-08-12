@@ -10,13 +10,13 @@
         <meta name="author" content="Ishaan Sayal">
       
       
-        <link rel="canonical" href="https://stevens-electric-boatworks.github.io/tidal-docs/intro/welcome/">
+        <link rel="canonical" href="https://stevens-electric-boatworks.github.io/tidal-docs/dev-setup/tidalview/">
       
       
-        <link rel="prev" href="../../features/">
+        <link rel="prev" href="../tidalcore/">
       
       
-        <link rel="next" href="../overall-system-design/">
+        <link rel="next" href="../../tidalcore/can-bus/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Intro to Tidal Telemetry - Tidal Telemetry Documentation</title>
+        <title>TidalView Setup Guide - Tidal Telemetry Documentation</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-tidal-telemetry" class="md-skip">
+        <a href="#step-1-installing-flutter" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro to Tidal Telemetry
+              TidalView Setup Guide
             
           </span>
         </div>
@@ -214,13 +214,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../intro/welcome/" class="md-tabs__link">
           
   
   
@@ -236,11 +234,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../dev-setup/prerequisites/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../prerequisites/" class="md-tabs__link">
           
   
   
@@ -520,6 +520,175 @@
       
   
   
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction (Start Here)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Introduction (Start Here)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/welcome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro to Tidal Telemetry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/overall-system-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overall System Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/tidalcore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TidalCore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/tidalview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TidalView
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -539,17 +708,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Introduction (Start Here)
+    Developer Setup
   
 
     
@@ -560,12 +729,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Introduction (Start Here)
+    Developer Setup
   
 
           </label>
@@ -575,55 +744,17 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Intro to Tidal Telemetry
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../overall-system-design/" class="md-nav__link">
+      <a href="../prerequisites/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Overall System Design
+    Prerequisites
   
 
     
@@ -669,66 +800,24 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../tidalview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     
   
-    TidalView
-  
-
-    
-  </span>
   
   
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
+    <li class="md-nav__item md-nav__item--active">
       
-    </li>
-  
-
-    
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-  
-  
-  
-  
-    
-    
-    
-    
       
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
     
   
-    Developer Setup
+    TidalView
   
 
     
@@ -736,84 +825,10 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Developer Setup
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-setup/prerequisites/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Prerequisites
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-setup/tidalcore/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TidalCore
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-setup/tidalview/" class="md-nav__link">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -829,6 +844,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-installing-flutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Installing Flutter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-android-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Install Android Studio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-cloning-tidalview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Cloning TidalView
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-rosbridge-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: ROSBridge Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -841,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-setup/tidalshore.md" class="md-nav__link">
+      <a href="../tidalshore.md" class="md-nav__link">
         
   
   
@@ -1374,24 +1451,56 @@
 
 
 
-<h1 id="welcome-to-tidal-telemetry">Welcome to Tidal Telemetry<a class="headerlink" href="#welcome-to-tidal-telemetry" title="Permanent link">&para;</a></h1>
-<p>Welcome to the Tidal Telemetry platform, built by Stevens Electric Boatworks. The goal of these series of articles is to educate you about the various portions of the control system, the design philosophy behind them, and provide a theoretical foundation before diving into the actual setup and code of the project. </p>
-<p>The 3 core projects are:</p>
-<ul>
-<li><strong><abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr></strong> - The primary control code which aggregates data from the boats sensors, communicates with motor controllers over <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr>, records GPS information, and provides a data up-link via cellular to the shore system (<abbr title="Built using web technologies, the website which displays telemetry to remote operators">TidalShore</abbr>)</li>
-<li><strong><abbr title="Built using web technologies, the website which displays telemetry to remote operators">TidalShore</abbr></strong> - The web based shore monitoring system which provides easy access to all data, server-side redundant data logging, downloading, and parsing, as log files</li>
-<li><strong><abbr title="Built using Flutter, the driver dashboard deployed directly on the boat">TidalView</abbr></strong> - The driver dashboard which runs directly on the boat, giving the driver mission critical information about the boat's systems, as well as providing diagnostics tools when a cellular connection to <abbr title="Built using web technologies, the website which displays telemetry to remote operators">TidalShore</abbr> isn't available</li>
-</ul>
-<p>The project tech stack consists of as follows:</p>
-<ul>
-<li><strong>C++ &amp; Python</strong> - Used to implement the control system code alongside <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> (Robot Operating System)</li>
-<li><strong>Typescript/JavaScript/React/Tailwind-CSS</strong> - Used to implement the web-based shore system, including the shore server and client</li>
-<li><strong>Flutter/Dart</strong> - Waterboard is implemented in this language</li>
-<li><strong><abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr></strong> - The backbone of the on-boat control system</li>
-<li><strong>Linux</strong> - <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> runs on Linux, as well as being the primary development platform</li>
-</ul>
-<p>Each of these form a critical component of the tech stack, and basic knowledge should be known about all parts of the tech stack to be successful.</p>
-<p>To get started, continue reading more about the overall system design, as well as about each of the 3 main projects.</p>
+  <h1>TidalView</h1>
+
+<p>Whilst <abbr title="Built using Flutter, the driver dashboard deployed directly on the boat">TidalView</abbr> only requires Flutter in order to build and write code, it will be very hard to test your changes against <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> data without having <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> installed. Therefore, it is <strong>highly</strong> recommended to have <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> installed and configured with the prior instructions. </p>
+<p>While these steps are designed to be mostly OS agnostic and Flutter supports all the major OS and distributions, you may have to adjust the instructions for the specific OS and configuration you are using.</p>
+<h2 id="step-1-installing-flutter">Step 1: Installing Flutter<a class="headerlink" href="#step-1-installing-flutter" title="Permanent link">&para;</a></h2>
+<p>To install Flutter, follow the documentation on <a href="http://docs.flutter.dev/install/quick">their website</a>. We recommend installing VSCode and using the VSCode extension. </p>
+<h2 id="step-2-install-android-studio">Step 2: Install Android Studio<a class="headerlink" href="#step-2-install-android-studio" title="Permanent link">&para;</a></h2>
+<p>To install Android Studio, it is recommended to use Jetbrains Toolbox, which can be installed on any platform. Once installed, you can download and install Android Studio using the app, and set it up. 
+extension
+Once installed, open <code>Settings</code> -&gt; <code>Plugins</code> -&gt; <code>Marketplace</code>, and install the Flutter plugin, and restart your IDE. </p>
+<h2 id="step-3-cloning-tidalview">Step 3: Cloning <abbr title="Built using Flutter, the driver dashboard deployed directly on the boat">TidalView</abbr><a class="headerlink" href="#step-3-cloning-tidalview" title="Permanent link">&para;</a></h2>
+<p>In your terminal, clone <abbr title="Built using Flutter, the driver dashboard deployed directly on the boat">TidalView</abbr> into a directory of your choice:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Stevens-Electric-Boatworks/waterboard
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>waterboard
+</span></code></pre></div></p>
+<p>Then, download all the required dependencies:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flutter<span class="w"> </span>pub<span class="w"> </span>get
+</span></code></pre></div></p>
+<p>At this point, you should be able to build the application for your platform:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>flutter<span class="w"> </span>build<span class="w"> </span><span class="o">[</span><span class="nv">PLATFORM</span><span class="o">=</span>windows,linux,macos,web<span class="o">]</span>
+</span></code></pre></div></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>flutter<span class="w"> </span>build<span class="w"> </span>windows
+</span></code></pre></div>
+</div>
+<p>You can now open the project directory in Android Studio, and you should be build and test for the different platforms. </p>
+<h2 id="step-4-rosbridge-setup">Step 4: <abbr title="Converts ROS2 messages into normal JSON which is used by TidalView">ROSBridge</abbr> Setup<a class="headerlink" href="#step-4-rosbridge-setup" title="Permanent link">&para;</a></h2>
+<p>While optional, this step is highly recommended so you can test your code with data from <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr>/<abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr>. To install <abbr title="Converts ROS2 messages into normal JSON which is used by TidalView">ROSBridge</abbr>, enter your sourced environment (whether this be via a container, WSL2, etc.), and run:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ros-kilted-rosbridge-server
+</span></code></pre></div></p>
+<p>Then, to pick up the new package, run:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">source</span><span class="w"> </span>/opt/ros/kilted/setup.bash
+</span></code></pre></div></p>
+<p>Then, enter the <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> environment by running:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>~/eboat_src/ros_ws/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+</span></code></pre></div>
+or, if you set it up following the optional instructions:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ros
+</span></code></pre></div>
+<p>You will now be able to run <abbr title="Converts ROS2 messages into normal JSON which is used by TidalView">ROSBridge</abbr> by running the command:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>rosbridge_server<span class="w"> </span>rosbridge_websocket_launch.xml
+</span></code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <abbr title="Converts ROS2 messages into normal JSON which is used by TidalView">ROSBridge</abbr> command is quite tedious to type out. Therefore, it is recommended to add an alias for this command. You can do this by adding the following line to the bottom of your <code>~/.bashrc</code> file
+<div class="language-bash highlight"><span class="filename">~/.bashrc</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">rosbridge</span><span class="o">=</span><span class="s2">&quot;ros2 launch rosbridge_server rosbridge_websocket_launch.xml&quot;</span>
+</span></code></pre></div></p>
+</div>
+<p>In <abbr title="Built using Flutter, the driver dashboard deployed directly on the boat">TidalView</abbr> settings, you can now set the IP to <code>locahost</code> and the port to <code>8080</code>, and it should automatically connect to <abbr title="Converts ROS2 messages into normal JSON which is used by TidalView">ROSBridge</abbr>.</p>
 
 
 
@@ -1427,7 +1536,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../features/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Features">
+          <a href="../tidalcore/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TidalCore">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1437,20 +1546,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Features
+                TidalCore
               </div>
             </div>
           </a>
         
         
           
-          <a href="../overall-system-design/" class="md-footer__link md-footer__link--next" aria-label="Next: Overall System Design">
+          <a href="../../tidalcore/can-bus/" class="md-footer__link md-footer__link--next" aria-label="Next: CAN Bus">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Overall System Design
+                CAN Bus
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -16,7 +16,7 @@
         <link rel="prev" href="../prerequisites/">
       
       
-        <link rel="next" href="../../tidalcore/can-bus/">
+        <link rel="next" href="../tidalview/">
       
       
         
@@ -839,9 +839,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Step 1: ROS Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#step-15-ros-tutorials" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -849,6 +850,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -889,6 +895,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tidalview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TidalView
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tidalshore.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TidalShore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1428,7 +1490,7 @@
 <p>The ROS desktop install is not actually needed, the bare-bones install works (and is what is used on the Controls PC), but it comes with tutorials and some GUI features which you can use while following the tutorials. </p>
 </div>
 <p>Once you have completed the ROS install, follow the examples at the bottom of the page, and ensure that you can see the messages. </p>
-<h2 id="step-15-ros-tutorials">Step 1.5: ROS Tutorials<a class="headerlink" href="#step-15-ros-tutorials" title="Permanent link">&para;</a></h2>
+<h3 id="step-15-ros-tutorials">Step 1.5: ROS Tutorials<a class="headerlink" href="#step-15-ros-tutorials" title="Permanent link">&para;</a></h3>
 <p>At this point, you should take the time to actually learn how to develop against ROS, and get familiar before continuing with the rest of the steps. ROS has some excellent tutorials <a href="https://docs.ros.org/en/kilted/Tutorials.html">here</a>, and taking some care to understand these concepts and work through the tutorials should give you some good experience. </p>
 <p>It is recommended to follow the following tutorials:</p>
 <ul>
@@ -1547,7 +1609,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JetBrains</label><label for="__tabbed_1_2">VSCode</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Ubuntu</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Ubuntu</label><label for="__tabbed_2_3">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition note">
@@ -1592,11 +1654,14 @@ or
 </span></code></pre></div></p>
 <p>Finally, start the IDE by running either the  <code>clion</code> or <code>pycharm</code> commands. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. </p>
 </div>
+<div class="tabbed-block">
+<p><strong>TODO</strong></p>
+</div>
 </div>
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux</label><label for="__tabbed_3_2">Ubuntu</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux</label><label for="__tabbed_3_2">Ubuntu</label><label for="__tabbed_3_3">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition note">
@@ -1648,6 +1713,9 @@ or
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>ros
 </span></code></pre></div></p>
 <p>Finally, start the IDE by running the <code>code</code> command. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. </p>
+</div>
+<div class="tabbed-block">
+<p><strong>TODO</strong></p>
 </div>
 </div>
 </div>
@@ -1706,13 +1774,13 @@ or
         
         
           
-          <a href="../../tidalcore/can-bus/" class="md-footer__link md-footer__link--next" aria-label="Next: CAN Bus">
+          <a href="../tidalview/" class="md-footer__link md-footer__link--next" aria-label="Next: TidalView">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                CAN Bus
+                TidalView
               </div>
             </div>
             <div class="md-footer__button md-icon">
