@@ -75,6 +75,8 @@ nav:
   - Developer Setup:
     - Prerequisites: dev-setup/prerequisites.md
     - TidalCore: dev-setup/tidalcore.md
+    - TidalView: dev-setup/tidalview.md
+    - TidalShore: dev-setup/tidalshore.md
   - TidalCore:
     - CAN Bus: tidalcore/can-bus.md
     - Networking Configuration: tidalcore/networking-configuration.md

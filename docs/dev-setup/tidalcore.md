@@ -22,7 +22,7 @@ This first step will involve installing ROS2 Kilted Kaiju. You should follow the
 
 Once you have completed the ROS install, follow the examples at the bottom of the page, and ensure that you can see the messages. 
 
-## Step 1.5: ROS Tutorials
+### Step 1.5: ROS Tutorials
 
 At this point, you should take the time to actually learn how to develop against ROS, and get familiar before continuing with the rest of the steps. ROS has some excellent tutorials [here](https://docs.ros.org/en/kilted/Tutorials.html), and taking some care to understand these concepts and work through the tutorials should give you some good experience. 
 
@@ -231,6 +231,8 @@ In order for any of the IDE's to work, we need to make sure that we start the ID
 		```
 		
 		Finally, start the IDE by running either the  `clion` or `pycharm` commands. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. 
+	=== "Windows"
+		**TODO**
 
 === "VSCode"
 
@@ -293,5 +295,8 @@ In order for any of the IDE's to work, we need to make sure that we start the ID
 		```
 		
 		Finally, start the IDE by running the `code` command. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. 
+	=== "Windows"
+		**TODO**
+		
 
 
