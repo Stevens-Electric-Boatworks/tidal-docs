@@ -324,7 +324,7 @@
   
     
   
-  Website
+  Website ↗
 
       </a>
     </li>
@@ -343,7 +343,7 @@
   
     
   
-  GitHub
+  GitHub ↗
 
       </a>
     </li>
@@ -362,7 +362,7 @@
   
     
   
-  ROS Documenation
+  ROS Documenation ↗
 
       </a>
     </li>
@@ -1316,7 +1316,7 @@
   <span class="md-ellipsis">
     
   
-    Website
+    Website ↗
   
 
     
@@ -1343,7 +1343,7 @@
   <span class="md-ellipsis">
     
   
-    GitHub
+    GitHub ↗
   
 
     
@@ -1370,7 +1370,7 @@
   <span class="md-ellipsis">
     
   
-    ROS Documenation
+    ROS Documenation ↗
   
 
     
@@ -1431,8 +1431,8 @@
 <div class="tabbed-block">
 <p>​Windows features a tool called <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL2</a> (Windows Subsystem for Linux). WSL2 works by creating a container which runs your choice of Linux distribution, with the main benefit being that the distribution is contained, but can still be integerated into the rest of the OS/Developer Tools. </p>
 <p>​   To get started, install the specific version of Ubuntu used by <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> Kilted Kaiju. This command must be run in an elevated (admin) powershell terminal:</p>
-<div class="highlight"><span class="filename">powershell</span><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-install</span> <span class="n">ubuntu</span><span class="p">-</span><span class="n">24</span><span class="p">.</span><span class="n">04</span>
-</code></pre></div>
+<div class="language-powershell highlight"><span class="filename">powershell</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">wsl</span> <span class="p">-</span><span class="n">-install</span> <span class="n">ubuntu</span><span class="p">-</span><span class="n">24</span><span class="p">.</span><span class="n">04</span>
+</span></code></pre></div>
 <p>​   On the first run, this will install WSL2, configure the required Windows features, and prompt for a reboot. </p>
 <p>​   Once rebooted, you should be able to open the <strong>Terminal</strong> application, click on the <code>+</code> on the top bar, and click on Ubuntu.</p>
 <p>It recommended to take a good look around the Windows terminal app, and change the settings/theme/keybinds to your liking. You will be spending a lot of time in the terminal, so make it comfy for you.</p>
@@ -1442,14 +1442,14 @@
 <p>​The only two distributions supported by <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> is Ubuntu 24.04, and Redhat Enterprise Linux (RHEL) 9. 
 If you are not running either of them, you can optionally use a virtual machine to run Ubuntu (not recommended due to performance loss), or a container. </p>
 <p>The following guide is for <a href="https://containertoolbx.org/">Toolbx</a>, which is installed by default on Fedora systems. To get started, create a toolbox with the specific ubuntu version:
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>toolbox<span class="w"> </span>create<span class="w"> </span>--distro<span class="w"> </span>ubuntu<span class="w"> </span>--release<span class="w"> </span><span class="m">24</span>.04<span class="w"> </span>ros
-</code></pre></div>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>toolbox<span class="w"> </span>create<span class="w"> </span>--distro<span class="w"> </span>ubuntu<span class="w"> </span>--release<span class="w"> </span><span class="m">24</span>.04<span class="w"> </span>ros
+</span></code></pre></div>
 This will create a container with a name of "ros". You can then enter the container by running:
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>toolbox<span class="w"> </span>enter<span class="w"> </span>ros
-</code></pre></div>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>toolbox<span class="w"> </span>enter<span class="w"> </span>ros
+</span></code></pre></div>
 Once you are in the container, you should be able to run Ubuntu commands without error, for example:
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>apt<span class="w"> </span>list
-</code></pre></div>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apt<span class="w"> </span>list
+</span></code></pre></div>
 The container itself is designed to seemleslly integrate with the host OS, and will have access to most of the host OS components (read toolbox documentation for more detail). Remember to rerun <code>toolbox enter ros</code> in every new terminal window you open, or else you will not be able to use Ubuntu commands.</p>
 <p>At this step, you are ready to install <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr>. </p>
 </div>

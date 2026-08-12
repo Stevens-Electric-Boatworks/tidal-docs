@@ -324,7 +324,7 @@
   
     
   
-  Website
+  Website ↗
 
       </a>
     </li>
@@ -343,7 +343,7 @@
   
     
   
-  GitHub
+  GitHub ↗
 
       </a>
     </li>
@@ -362,7 +362,7 @@
   
     
   
-  ROS Documenation
+  ROS Documenation ↗
 
       </a>
     </li>
@@ -1333,7 +1333,7 @@
   <span class="md-ellipsis">
     
   
-    Website
+    Website ↗
   
 
     
@@ -1360,7 +1360,7 @@
   <span class="md-ellipsis">
     
   
-    GitHub
+    GitHub ↗
   
 
     
@@ -1387,7 +1387,7 @@
   <span class="md-ellipsis">
     
   
-    ROS Documenation
+    ROS Documenation ↗
   
 
     
@@ -1469,13 +1469,13 @@
 <h3 id="test-nodes">"Test" Nodes<a class="headerlink" href="#test-nodes" title="Permanent link">&para;</a></h3>
 <p>However, another feature of topics is that the subscriber does not actually care where the data is coming from. In our example, <code>shore_comms</code> doesn't know, nor care that the data originally came from the <code>can_node</code>. All that matters is that there is data in the topic. </p>
 <p>We can use this to our advantage. Let's say that we are developing a new dashboard that reads data directly from the topics, but we don't have access to the real hardware. We would want to send fake data to test our dashboard, but it would normally require us to modify the real code to check if we are in a "testing" condition, and just send fake data, for example:
-<div class="highlight"><pre><span></span><code><span class="o">...</span>
-<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_testing</span><span class="p">:</span>
-    <span class="n">send_fake_data</span><span class="p">()</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">init_real_hardware</span><span class="p">()</span> <span class="c1"># Will cause an error/crash if we don&#39;t have the hardware!!!</span>
-<span class="o">...</span>
-</code></pre></div></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">...</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_testing</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">send_fake_data</span><span class="p">()</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">init_real_hardware</span><span class="p">()</span> <span class="c1"># Will cause an error/crash if we don&#39;t have the hardware!!!</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="o">...</span>
+</span></code></pre></div></p>
 <p>This is quite annoying, since we now add a very consequential code path in an important part of the program. </p>
 <p>Here is what we do <strong>instead</strong>:</p>
 <p>We can create a fake "test node", whose only job is to send fake test data. Now, when we are testing the dashboard, instead of starting the "real" node, we start our test one instead. The test node will now send fake data, but our dashboard can't tell the difference. In this way, if I know it works with the test data, I can also for know for certain that it will also work with the real node connected to real hardware.</p>

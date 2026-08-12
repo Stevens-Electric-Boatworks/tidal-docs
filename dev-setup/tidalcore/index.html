@@ -324,7 +324,7 @@
   
     
   
-  Website
+  Website ↗
 
       </a>
     </li>
@@ -343,7 +343,7 @@
   
     
   
-  GitHub
+  GitHub ↗
 
       </a>
     </li>
@@ -362,7 +362,7 @@
   
     
   
-  ROS Documenation
+  ROS Documenation ↗
 
       </a>
     </li>
@@ -883,40 +883,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 4: IDE Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jetbrains" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        JetBrains
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="JetBrains">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1344,7 +1310,7 @@
   <span class="md-ellipsis">
     
   
-    Website
+    Website ↗
   
 
     
@@ -1371,7 +1337,7 @@
   <span class="md-ellipsis">
     
   
-    GitHub
+    GitHub ↗
   
 
     
@@ -1398,7 +1364,7 @@
   <span class="md-ellipsis">
     
   
-    ROS Documenation
+    ROS Documenation ↗
   
 
     
@@ -1447,6 +1413,10 @@
 <p><strong>IMPORTANT:</strong> Make sure you followed the prerequisite guide for <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> with the OS set up. You should also have some familiarity with Linux at this point. You should also have Git configured.</p>
 </div>
 <h2 id="step-1-ros-install">Step 1: ROS Install<a class="headerlink" href="#step-1-ros-install" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Make sure that if you are using Linux, that you are entering the container by running <code>toolbox enter ros</code>, so the installation happens inside of the container, and this must be done for every new terminal session.</p>
+</div>
 <p>This first step will involve installing <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> Kilted Kaiju. You should follow the steps outlined on their documentation, which can be found <a href="https://docs.ros.org/en/kilted/Installation/Ubuntu-Install-Debs.html">here</a>. More specifically, you need to follow the follow steps on their page. Keep in the following details:</p>
 <ul>
 <li>Install <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> development tools</li>
@@ -1477,9 +1447,9 @@
 <p>These tutorials give a baseline overview of many of the core concepts of ROS which we use on a day-to-day basis. Once you feel comfortable with using ROS, you can move onto installing and configuring <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr>. </p>
 <h2 id="step-2-tidalcore-code-setup">Step 2: <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> Code Setup<a class="headerlink" href="#step-2-tidalcore-code-setup" title="Permanent link">&para;</a></h2>
 <p>We will first install the dependinces used by <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr>, which is a combination of python and C++ packages. To install them, run the following:</p>
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--break-system-packages<span class="w"> </span>websockets<span class="w"> </span>canopen<span class="w"> </span>pyserial<span class="w"> </span>pynmea
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nlohmann-json3-dev
-</code></pre></div>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--break-system-packages<span class="w"> </span>websockets<span class="w"> </span>canopen<span class="w"> </span>pyserial<span class="w"> </span>pynmea
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nlohmann-json3-dev
+</span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use <code>apt</code> to install python packages, as they are usually very out of date.</p>
@@ -1490,13 +1460,13 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <p>While optional <strong>if you have already setup Git yourself</strong>, you should authenticate with GitHub at this point, so you can make commits from your account. Run <code>$ sudo apt install gh -y</code> to install the GitHub CLI, then run <code>$ gh auth login</code>, and make sure to authenticate with Git, and store the credentials with Git.</p>
 </div>
 <p><strong>Whilst in the home directory,</strong> you can now run:
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Stevens-Electric-Boatworks/manned-boat.git<span class="w"> </span>eboat_src
-</code></pre></div></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Stevens-Electric-Boatworks/manned-boat.git<span class="w"> </span>eboat_src
+</span></code></pre></div></p>
 <p>If you have completed the <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> tutorials, you will know that you need to source the environment. In our code, the <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> workspace is located at <code>~/eboat_src/ros_ws</code>. </p>
 <p>At this point, you should now try to compile and build the actual code:
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/eboat_src/ros_ws
-colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
-</code></pre></div>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>~/eboat_src/ros_ws
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
+</span></code></pre></div>
  The <code>--symlink-install</code> flag exists to provide better compatibility with IDE's, since the build files will now point to the original python source code instead of being a copy. This makes it so that we don't have to keep rebuilding to get updated sources for our IDE. This only applies to Python code, since C++ code gets compiled into a binary, which must be redone every time the source code changes.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1510,57 +1480,57 @@ colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 <h2 id="step-3-running-code-in-test-mode">Step 3: Running Code in Test Mode<a class="headerlink" href="#step-3-running-code-in-test-mode" title="Permanent link">&para;</a></h2>
 <p>At this point, you can now try to run the code and see if it successfully connects to <abbr title="Built using web technologies, the website which displays telemetry to remote operators">TidalShore</abbr>. </p>
 <p>To get started, open <abbr title="Built using web technologies, the website which displays telemetry to remote operators">TidalShore</abbr> in a web browser, and open up a new terminal tab, then:</p>
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>eboat
-</code></pre></div>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>eboat
+</span></code></pre></div>
 <p>On the first run, this command should give an error that it couldn't find <code>install/setup.bash</code>, since we have not built anything yet. To actually compile the code, run:
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
-</code></pre></div></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
+</span></code></pre></div></p>
 <p>Once the build is complete <strong>and is successful</strong>, rerun:
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>eboat
-</code></pre></div></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>eboat
+</span></code></pre></div></p>
 <p>You will now have sourced the <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> ROS environment.</p>
 <p>Lastly, run the test launch file by running:
-<div class="highlight"><span class="filename">bash</span><pre><span></span><code>ros2<span class="w"> </span>launch<span class="w"> </span>launch/test_eboat_allnodes_python.yaml
-</code></pre></div></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>launch/test_eboat_allnodes_python.yaml
+</span></code></pre></div></p>
 <p>You should then get a terminal output similar to below:
-<div class="highlight"><span class="filename">terminal output</span><pre><span></span><code>❯ ros2 launch launch/test_eboat_allnodes_python.yaml  
-[INFO] [launch]: All log files can be found below /home/----/.ros/log/2026-08-10-12-57-05-592153-toolbx-94234  
-[INFO] [launch]: Default logging verbosity is set to INFO  
-[INFO] [shore-1]: process started with pid [94237]  
-[INFO] [main-2]: process started with pid [94238]  
-[INFO] [test-3]: process started with pid [94239]  
-[INFO] [test-4]: process started with pid [94240]  
-[INFO] [test-5]: process started with pid [94241]  
-[INFO] [time_node-6]: process started with pid [94242]  
-[INFO] [sys_util-7]: process started with pid [94243]  
-[time_node-6] [INFO] [1786381025.996463644] [time]: The current time is ---- | ----  
-[main-2] [INFO] [1786381025.997540701] [alarms_watchdog]: Attempting to load /home/----/eboat_src/data/FAULTS.csv  
-[main-2] [INFO] [1786381025.999334848] [alarms_watchdog]: Loaded 441 error codes  
-[main-2] [INFO] [1786381025.999618522] [alarms_watchdog]: Attempting to load /home/----/eboat_src/data/fault_id_mapping.csv  
-[main-2] [INFO] [1786381026.000151635] [alarms_watchdog]: Loaded 192 motor error codes  
-[shore-1] [INFO] [1786381026.028064708] [shore_comms]: Logging &lt;/alarm/shore/publish&gt; with custom msg of &lt;ShoreBoatAlarm&gt;  
-[shore-1] [INFO] [1786381026.029466365] [shore_comms]: Logging &lt;/alarm/shore/delatch&gt; with custom msg of &lt;ShoreBoatAlarm&gt;  
-[shore-1] [INFO] [1786381026.282739757] [shore_comms]: Logging &lt;/rosout&gt; with custom msg of &lt;Log&gt;  
-[shore-1] [INFO] [1786381026.283457267] [shore_comms]: Logging &lt;/motion/gps&gt; with custom msg of &lt;GPSData&gt;  
-[shore-1] [INFO] [1786381026.283905020] [shore_comms]: Logging &lt;/motion/vtg&gt; with custom msg of &lt;GPSVTGData&gt;  
-[shore-1] [INFO] [1786381026.284321514] [shore_comms]: Logging &lt;/motion/sv&gt; with custom msg of &lt;GPSSVData&gt;  
-[shore-1] [INFO] [1786381026.284789815] [shore_comms]: Logging &lt;/motion/gsa&gt; with custom msg of &lt;GPGSAData&gt;  
-[shore-1] [INFO] [1786381026.285262374] [shore_comms]: Logging &lt;/cell&gt; with custom msg of &lt;CellData&gt;  
-[shore-1] [INFO] [1786381026.285697363] [shore_comms]: Logging &lt;/motors/motorA&gt; with custom msg of &lt;CANMotorData&gt;  
-[shore-1] [INFO] [1786381026.286140026] [shore_comms]: Logging &lt;/motors/motorB&gt; with custom msg of &lt;CANMotorData&gt;  
-[shore-1] [INFO] [1786381026.286519210] [shore_comms]: Logging &lt;/motors/can_bus_state&gt; with custom msg of &lt;CANBusStatus&gt;  
-[shore-1] [INFO] [1786381026.286939882] [shore_comms]: Logging &lt;/bms/cell_voltage&gt; with custom msg of &lt;BMSCellVoltage&gt;  
-[shore-1] [INFO] [1786381026.287366074] [shore_comms]: Logging &lt;/bms/pack_summary&gt; with custom msg of &lt;BMSPackSummary&gt;  
-[shore-1] [INFO] [1786381026.287868008] [shore_comms]: Logging &lt;/bms/soc_summary&gt; with custom msg of &lt;BMSSOCSummary&gt;  
-[shore-1] [INFO] [1786381026.288414898] [shore_comms]: Logging &lt;/bms/mcu_summary&gt; with custom msg of &lt;BMSMcuSummary&gt;  
-[shore-1] [INFO] [1786381026.288872679] [shore_comms]: Logging &lt;/can/cooling_temp&gt; with custom msg of &lt;CANThermistor&gt;  
-[shore-1] [INFO] [1786381026.289442311] [shore_comms]: Logging &lt;/can/bms_thermistor&gt; with custom msg of &lt;CANThermistor&gt;  
-[shore-1] [INFO] [1786381026.289879624] [shore_comms]: Logging &lt;/boat_time&gt; with custom msg of &lt;Time&gt;  
-[shore-1] [INFO] [1786381026.290344439] [shore_comms]: Logging &lt;/sys_utilization&gt; with custom msg of &lt;SysUtilData&gt;  
-[shore-1] [INFO] [1786381026.293247683] [shore_comms]: Attempting to connect to the Shore Server via a Websocket at wss://---tidalshore url---/api
-[shore-1] [INFO] [1786381026.396921928] [shore_comms]: Connected to the websocket at wss://---tidalshore url---/api ✅  
-[shore-1] [INFO] [1786381026.397490588] [shore_comms]: Data will be sent every 0.1s
-</code></pre></div></p>
+<div class="language-text highlight"><span class="filename">terminal output</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>❯ ros2 launch launch/test_eboat_allnodes_python.yaml  
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>[INFO] [launch]: All log files can be found below /home/----/.ros/log/2026-08-10-12-57-05-592153-toolbx-94234  
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>[INFO] [launch]: Default logging verbosity is set to INFO  
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>[INFO] [shore-1]: process started with pid [94237]  
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>[INFO] [main-2]: process started with pid [94238]  
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>[INFO] [test-3]: process started with pid [94239]  
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>[INFO] [test-4]: process started with pid [94240]  
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>[INFO] [test-5]: process started with pid [94241]  
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>[INFO] [time_node-6]: process started with pid [94242]  
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>[INFO] [sys_util-7]: process started with pid [94243]  
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>[time_node-6] [INFO] [1786381025.996463644] [time]: The current time is ---- | ----  
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>[main-2] [INFO] [1786381025.997540701] [alarms_watchdog]: Attempting to load /home/----/eboat_src/data/FAULTS.csv  
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>[main-2] [INFO] [1786381025.999334848] [alarms_watchdog]: Loaded 441 error codes  
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>[main-2] [INFO] [1786381025.999618522] [alarms_watchdog]: Attempting to load /home/----/eboat_src/data/fault_id_mapping.csv  
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>[main-2] [INFO] [1786381026.000151635] [alarms_watchdog]: Loaded 192 motor error codes  
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>[shore-1] [INFO] [1786381026.028064708] [shore_comms]: Logging &lt;/alarm/shore/publish&gt; with custom msg of &lt;ShoreBoatAlarm&gt;  
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>[shore-1] [INFO] [1786381026.029466365] [shore_comms]: Logging &lt;/alarm/shore/delatch&gt; with custom msg of &lt;ShoreBoatAlarm&gt;  
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>[shore-1] [INFO] [1786381026.282739757] [shore_comms]: Logging &lt;/rosout&gt; with custom msg of &lt;Log&gt;  
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>[shore-1] [INFO] [1786381026.283457267] [shore_comms]: Logging &lt;/motion/gps&gt; with custom msg of &lt;GPSData&gt;  
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>[shore-1] [INFO] [1786381026.283905020] [shore_comms]: Logging &lt;/motion/vtg&gt; with custom msg of &lt;GPSVTGData&gt;  
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>[shore-1] [INFO] [1786381026.284321514] [shore_comms]: Logging &lt;/motion/sv&gt; with custom msg of &lt;GPSSVData&gt;  
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>[shore-1] [INFO] [1786381026.284789815] [shore_comms]: Logging &lt;/motion/gsa&gt; with custom msg of &lt;GPGSAData&gt;  
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>[shore-1] [INFO] [1786381026.285262374] [shore_comms]: Logging &lt;/cell&gt; with custom msg of &lt;CellData&gt;  
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>[shore-1] [INFO] [1786381026.285697363] [shore_comms]: Logging &lt;/motors/motorA&gt; with custom msg of &lt;CANMotorData&gt;  
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>[shore-1] [INFO] [1786381026.286140026] [shore_comms]: Logging &lt;/motors/motorB&gt; with custom msg of &lt;CANMotorData&gt;  
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>[shore-1] [INFO] [1786381026.286519210] [shore_comms]: Logging &lt;/motors/can_bus_state&gt; with custom msg of &lt;CANBusStatus&gt;  
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>[shore-1] [INFO] [1786381026.286939882] [shore_comms]: Logging &lt;/bms/cell_voltage&gt; with custom msg of &lt;BMSCellVoltage&gt;  
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>[shore-1] [INFO] [1786381026.287366074] [shore_comms]: Logging &lt;/bms/pack_summary&gt; with custom msg of &lt;BMSPackSummary&gt;  
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>[shore-1] [INFO] [1786381026.287868008] [shore_comms]: Logging &lt;/bms/soc_summary&gt; with custom msg of &lt;BMSSOCSummary&gt;  
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>[shore-1] [INFO] [1786381026.288414898] [shore_comms]: Logging &lt;/bms/mcu_summary&gt; with custom msg of &lt;BMSMcuSummary&gt;  
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>[shore-1] [INFO] [1786381026.288872679] [shore_comms]: Logging &lt;/can/cooling_temp&gt; with custom msg of &lt;CANThermistor&gt;  
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>[shore-1] [INFO] [1786381026.289442311] [shore_comms]: Logging &lt;/can/bms_thermistor&gt; with custom msg of &lt;CANThermistor&gt;  
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>[shore-1] [INFO] [1786381026.289879624] [shore_comms]: Logging &lt;/boat_time&gt; with custom msg of &lt;Time&gt;  
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>[shore-1] [INFO] [1786381026.290344439] [shore_comms]: Logging &lt;/sys_utilization&gt; with custom msg of &lt;SysUtilData&gt;  
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>[shore-1] [INFO] [1786381026.293247683] [shore_comms]: Attempting to connect to the Shore Server via a Websocket at wss://---tidalshore url---/api
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>[shore-1] [INFO] [1786381026.396921928] [shore_comms]: Connected to the websocket at wss://---tidalshore url---/api ✅  
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>[shore-1] [INFO] [1786381026.397490588] [shore_comms]: Data will be sent every 0.1s
+</span></code></pre></div></p>
 <p>You should also see <abbr title="Built using web technologies, the website which displays telemetry to remote operators">TidalShore</abbr> start to show the test data as well. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1574,9 +1544,116 @@ colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 <p>Unfortunately, setting up your IDE can be quite complicated depending on which environment you are running. Whilst this guide tries to give a configuration that does work, it can take some manual adjustment to get working. </p>
 <p>There are 2 IDE's which we recommend you use, JetBrains IDE's (PyCharm &amp; CLion), and VSCode with the <code>clangd</code> language server.</p>
 <p>In order for any of the IDE's to work, we need to make sure that we start the IDE from a <strong>ROS sourced</strong> environment. This will allow the IDE to be able to see the ROS packages, libraries, etc. needed to actually develop. Therefore, all of these different configurations </p>
-<h3 id="jetbrains">JetBrains<a class="headerlink" href="#jetbrains" title="Permanent link">&para;</a></h3>
-<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
-<p>The recommended setup here is to use </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JetBrains</label><label for="__tabbed_1_2">VSCode</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Ubuntu</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is for if you are running Linux as your MAIN OS, not if you are running WSL on Windows. There are separate instructions for Ubuntu specifically.</p>
+</div>
+<p>In order for the Jetbrains IDE to be able to recognize the sourced environment, we will need to run the IDE executable whilst inside of the container. </p>
+<p>To get started, we recommend using <a href="https://www.jetbrains.com/toolbox-app/">Jetbrains Toolbox</a> along with the <a href="https://www.jetbrains.com/academy/student-pack/">Jetbrains Student Developer Pack</a>. Once installed and running, you need to go to <code>Settings</code> -&gt; <code>Tools</code> -&gt; <code>Generate Shell Scripts</code>, and enable that option. </p>
+<p>You can now install PyCharm (Python IDE) or CLion (C++ IDE). Once they are done installing, start a new terminal instance, and ensure that you can start the IDE by running:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pycharm
+</span></code></pre></div>
+or
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>clion
+</span></code></pre></div></p>
+<p>If the IDE has successfully started, close the IDE if you haven't already. </p>
+<p>The next steps <strong>have to be performed every time you want to open the IDE</strong>. First, enter the toolbox/container by running:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>toolbox<span class="w"> </span>enter<span class="w"> </span>ros
+</span></code></pre></div></p>
+<p>Then, source the ROS workspace by doing either:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">cd</span><span class="w"> </span>~/eboat_src/ros_ws/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+</span></code></pre></div></p>
+<p>or, if you set it up following the optional instructions:
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ros
+</span></code></pre></div></p>
+<p>Finally, start the IDE by running either the  <code>clion</code> or <code>pycharm</code> commands. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. </p>
+</div>
+<div class="tabbed-block">
+<p>In order for the Jetbrains IDE to be able to recognize the sourced environment, we will need to run the IDE executable whilst we have a sourced terminal environment. </p>
+<p>To get started, we recommend using <a href="https://www.jetbrains.com/toolbox-app/">Jetbrains Toolbox</a> along with the <a href="https://www.jetbrains.com/academy/student-pack/">Jetbrains Student Developer Pack</a>. Once installed and running, you need to go to <code>Settings</code> -&gt; <code>Tools</code> -&gt; <code>Generate Shell Scripts</code>, and enable that option. </p>
+<p>You can now install PyCharm (Python IDE) or CLion (C++ IDE). Once they are done installing, start a new terminal instance, and ensure that you can start the IDE by running:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pycharm
+</span></code></pre></div>
+or
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>clion
+</span></code></pre></div></p>
+<p>If the IDE has successfully started, close the IDE if you haven't already. </p>
+<p>The next steps <strong>have to be performed every time you want to open the IDE</strong>. First, source the ROS workspace by doing either:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">cd</span><span class="w"> </span>~/eboat_src/ros_ws/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+</span></code></pre></div></p>
+<p>or, if you set it up following the optional instructions:
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ros
+</span></code></pre></div></p>
+<p>Finally, start the IDE by running either the  <code>clion</code> or <code>pycharm</code> commands. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. </p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux</label><label for="__tabbed_3_2">Ubuntu</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is for if you are running Linux as your MAIN OS, not if you are running WSL on Windows. There are separate instructions for Ubuntu specifically.</p>
+</div>
+<p>You will first need to install VSCode. This can either be done by installing it using Flatpak, or your distributions package manager. Once installed, you should be able to run:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>code
+</span></code></pre></div></p>
+<p>You should now install the following extensions for VSCode:</p>
+<ul>
+<li>C/C++ Extension Pack</li>
+<li>Python Extension Pack</li>
+<li>Pylance</li>
+<li>clangd<ul>
+<li>It may prompt you to install the <code>clangd</code> language server. </li>
+</ul>
+</li>
+</ul>
+<p>The next steps <strong>have to be performed every time you want to open the IDE</strong>. First, enter the toolbox/container by running:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>toolbox<span class="w"> </span>enter<span class="w"> </span>ros
+</span></code></pre></div></p>
+<p>Then, source the ROS workspace by doing either:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">cd</span><span class="w"> </span>~/eboat_src/ros_ws/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+</span></code></pre></div></p>
+<p>or, if you set it up following the optional instructions:
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ros
+</span></code></pre></div></p>
+<p>Finally, start the IDE by running the <code>code</code> command. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. </p>
+</div>
+<div class="tabbed-block">
+<p>You will first need to install VSCode. This can either be done by installing it using Flatpak, or your distributions package manager. Once installed, you should be able to run:
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>code
+</span></code></pre></div></p>
+<p>You should now install the following extensions for VSCode:</p>
+<ul>
+<li>C/C++ Extension Pack</li>
+<li>Python Extension Pack</li>
+<li>Pylance</li>
+<li>clangd<ul>
+<li>It may prompt you to install the <code>clangd</code> language server.</li>
+</ul>
+</li>
+</ul>
+<p>The next steps <strong>have to be performed every time you want to open the IDE</strong>. First, source the environment by running:
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">cd</span><span class="w"> </span>~/eboat_src/ros_ws/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+</span></code></pre></div></p>
+<p>or, if you set it up following the optional instructions:
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>ros
+</span></code></pre></div></p>
+<p>Finally, start the IDE by running the <code>code</code> command. At this point, the IDE should pick up all the system libraries, and you can open and modify the code. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 

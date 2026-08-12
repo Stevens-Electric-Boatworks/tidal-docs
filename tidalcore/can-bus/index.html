@@ -324,7 +324,7 @@
   
     
   
-  Website
+  Website ↗
 
       </a>
     </li>
@@ -343,7 +343,7 @@
   
     
   
-  GitHub
+  GitHub ↗
 
       </a>
     </li>
@@ -362,7 +362,7 @@
   
     
   
-  ROS Documenation
+  ROS Documenation ↗
 
       </a>
     </li>
@@ -1372,7 +1372,7 @@
   <span class="md-ellipsis">
     
   
-    Website
+    Website ↗
   
 
     
@@ -1399,7 +1399,7 @@
   <span class="md-ellipsis">
     
   
-    GitHub
+    GitHub ↗
   
 
     
@@ -1426,7 +1426,7 @@
   <span class="md-ellipsis">
     
   
-    ROS Documenation
+    ROS Documenation ↗
   
 
     
@@ -1489,19 +1489,19 @@
 <h2 id="linux-can-configuration">Linux <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> Configuration<a class="headerlink" href="#linux-can-configuration" title="Permanent link">&para;</a></h2>
 <p>Linux already has support for <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> built into the kernel, which means that all we have to do is enable the <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> implementation for the specific USB device. When we plug in the <abbr title="The USB-to-CAN adapter used by TidalCore">Kvaser</abbr> can adapter into the Controls PC, we want it to automatically enable and be brought up. </p>
 <p>To do this, we will create a <code>udev</code> rule by creating and opening a file at <code>/etc/udev/rules.d/80-can.rules</code>:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/udev/rules.d/80-can.rules
-sudo<span class="w"> </span>vim<span class="w"> </span>/etc/udev/rules.d/80-can.rules
-</code></pre></div>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/udev/rules.d/80-can.rules
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/udev/rules.d/80-can.rules
+</span></code></pre></div>
 <p>We will then put inside of the file:
-<div class="highlight"><pre><span></span><code>SUBSYSTEM==&quot;net&quot;, ACTION==&quot;add&quot;, KERNEL==&quot;can*&quot;, TAG+=&quot;systemd&quot;, RUN+=&quot;/bin/systemd-run --no-block /usr/local/bin/setup-can.sh %k&quot;
-</code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SUBSYSTEM==&quot;net&quot;, ACTION==&quot;add&quot;, KERNEL==&quot;can*&quot;, TAG+=&quot;systemd&quot;, RUN+=&quot;/bin/systemd-run --no-block /usr/local/bin/setup-can.sh %k&quot;
+</span></code></pre></div></p>
 <p>This will run a script whenever a <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> adapter is detected by the kernel. We will now create a script for this at <code>/usr/local/bin/setup-can.sh</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="nv">IFACE</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
-sleep<span class="w"> </span><span class="m">1</span>
-ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IFACE</span><span class="s2">&quot;</span><span class="w"> </span>down
-ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IFACE</span><span class="s2">&quot;</span><span class="w"> </span>up<span class="w"> </span><span class="nb">type</span><span class="w"> </span>can<span class="w"> </span>bitrate<span class="w"> </span><span class="m">500000</span>
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">IFACE</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>sleep<span class="w"> </span><span class="m">1</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IFACE</span><span class="s2">&quot;</span><span class="w"> </span>down
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IFACE</span><span class="s2">&quot;</span><span class="w"> </span>up<span class="w"> </span><span class="nb">type</span><span class="w"> </span>can<span class="w"> </span>bitrate<span class="w"> </span><span class="m">500000</span>
+</span></code></pre></div>
 <p>This configures the <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> bus to run at a bitrate of 500 kbps.</p>
 <h2 id="kvaser-adapter"><abbr title="The USB-to-CAN adapter used by TidalCore">Kvaser</abbr> Adapter<a class="headerlink" href="#kvaser-adapter" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../../assets/images/screenshots/can/kvaser.png" /></p>
@@ -1607,9 +1607,9 @@ ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span
 </figcaption>
 </figure>
 <p>For example, if the first byte in the byte array is <code>0x02</code>, then we know that index 2 and 3 combined will give us the pack voltage. We can then get the integer value with the following code:
-<div class="highlight"><pre><span></span><code><span class="n">pack_voltage_raw</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;little&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">/</span> <span class="mf">10.0</span> 
-<span class="c1"># Divide by 10 since only integers can be sent, so we have to perform the conversion ourselves</span>
-</code></pre></div></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">pack_voltage_raw</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;little&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">/</span> <span class="mf">10.0</span> 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># Divide by 10 since only integers can be sent, so we have to perform the conversion ourselves</span>
+</span></code></pre></div></p>
 <p>All numbers transmitted are little-endian. </p>
 <p>However, the <abbr title="Battery Management System; manages main battery charging, health, and sensor information">BMS</abbr> does not send the data by itself. We have to prompt it to send the data. We can do this by transmitting a <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> message with an ID of <code>0x313</code> with the data <code>[0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01]</code>. Each index represents a kind of a data that we want transmitted, and since we want everything, we use <code>0x01</code> on everything.</p>
 <h3 id="bms-user-guide"><abbr title="Battery Management System; manages main battery charging, health, and sensor information">BMS</abbr> User Guide<a class="headerlink" href="#bms-user-guide" title="Permanent link">&para;</a></h3>
@@ -1618,8 +1618,8 @@ ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span
 <h2 id="can-cooling-temperature-sensors"><abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> Cooling Temperature Sensors<a class="headerlink" href="#can-cooling-temperature-sensors" title="Permanent link">&para;</a></h2>
 <p>The cooling temp sensors are custom PCB's which have a thermistor attached to them, which transmit their detected temperature over the <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> bus. </p>
 <p>Each <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> message sent is send with a <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> arbitration ID of <code>0xbe</code> and can be decoded by doing the following:</p>
-<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;little&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">temp</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;little&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span>
+</span></code></pre></div>
 
 
 
