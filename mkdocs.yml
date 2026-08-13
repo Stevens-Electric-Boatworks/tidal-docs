@@ -69,7 +69,7 @@ nav:
     - Features: features.md
   - Introduction (Start Here):
     - Intro to Tidal Telemetry: intro/welcome.md
-    - Overall System Design: intro/overall-system-design.md
+    - System Design: intro/system-design.md
     - TidalCore: intro/tidalcore.md
     - TidalView: intro/tidalview.md
   - Developer Setup:
