@@ -18,7 +18,7 @@ The project tech stack consists of as follows:
 
 * **C++ & Python** - Used to implement the control system code alongside ROS2 (Robot Operating System)
 * **Typescript/JavaScript/React/Tailwind-CSS** - Used to implement the web-based shore system, including the shore server and client
-* **Flutter/Dart** - Waterboard is implemented in this language
+* **Flutter/Dart** - TidalView is implemented in this language
 * **ROS2** - The backbone of the on-boat control system
 * **Linux** - ROS2 runs on Linux, as well as being the primary development platform
 
