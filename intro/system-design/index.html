@@ -10,7 +10,7 @@
         <meta name="author" content="Ishaan Sayal">
       
       
-        <link rel="canonical" href="https://stevens-electric-boatworks.github.io/tidal-docs/intro/overall-system-design/">
+        <link rel="canonical" href="https://stevens-electric-boatworks.github.io/tidal-docs/intro/system-design/">
       
       
         <link rel="prev" href="../welcome/">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Overall System Design - Tidal Telemetry</title>
+        <title>System Design - Tidal Telemetry</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overall-system" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overall System Design
+              System Design
             
           </span>
         </div>
@@ -608,6 +613,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Design
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -615,7 +638,7 @@
   <span class="md-ellipsis">
     
   
-    Overall System Design
+    System Design
   
 
     
@@ -624,6 +647,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overall-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overall System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tidalcore-system-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TidalCore System Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1395,9 +1457,54 @@
 
 
 
-  <h1>Overall System Design</h1>
+  <h1>System Design</h1>
 
-
+<h2 id="overall-system">Overall System<a class="headerlink" href="#overall-system" title="Permanent link">&para;</a></h2>
+<p><img alt="Overall System Design Diagram" src="../../assets/images/diagrams/overall-system.png" width="60%&quot;" /></p>
+<p>There are 5 primary components to the system:</p>
+<ul>
+<li><abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr>/Raspberry Pi/Controls PC<ul>
+<li>This runs the primary controls software, reads sensor data, and communicates with the shore</li>
+</ul>
+</li>
+<li>Shore System<ul>
+<li>This is our remote monitoring platform, which we communicate with using a cellular internet connection</li>
+<li>Can be used to see boat logs, faults, configuration settings, and all parameters</li>
+</ul>
+</li>
+<li>GPS/Cellular Connection<ul>
+<li>Using a USB serial connection, the SixFab Cellular Hat &amp; GPS provides us with speed, track, and an internet connection</li>
+</ul>
+</li>
+<li>Inmotion <abbr title="A standard built on top of CAN for more complex messaging using SDO's/PDO's/etc.">CANOpen</abbr> Motor Controller<ul>
+<li><abbr title="A standard built on top of CAN for more complex messaging using SDO's/PDO's/etc.">CANOpen</abbr> is the protocol which allows us to communicate with the motor controller</li>
+<li>We use a USB to <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> adapter from <abbr title="The USB-to-CAN adapter used by TidalCore">Kvaser</abbr> which allows us to </li>
+</ul>
+</li>
+<li>Cooling Temperature Sensors<ul>
+<li><strong>NEW: These sensors are now connected to the <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> bus instead, and do NOT use a USB serial communication</strong></li>
+</ul>
+</li>
+<li><abbr title="Built using Flutter, the driver dashboard deployed directly on the boat">TidalView</abbr> Driver &amp; Tech Display<ul>
+<li>Primary interface for the driver during the race and used for on-field troubleshooting with it's integrated </li>
+</ul>
+</li>
+</ul>
+<p>All the components on the boat are connected directly <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr>/Controls PC, and all of this data is communicated to the shore system. </p>
+<h2 id="tidalcore-system-diagram"><abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> System Diagram<a class="headerlink" href="#tidalcore-system-diagram" title="Permanent link">&para;</a></h2>
+<p><img alt="Overall System Design Diagram" src="../../assets/images/diagrams/ros.png" width="60%&quot;" /></p>
+<p><abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> is the primary software running on the Manned Boat. Its distributed architecture means that all the major systems are split into their own individual program, which can then communicate with each other. </p>
+<p>The main nodes are:</p>
+<ul>
+<li><strong>shore_comms</strong> - Handles communication to the shore system by using a websocket with a custom JSON protocol</li>
+<li><strong>alarms_manager</strong> - Manages all the faults on the boat by referencing an internal database, and sends it to the shore system</li>
+<li><strong>motor_node</strong> - Communicates to the <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> subsystem, including the motor controller and cooling sensors</li>
+<li><strong>motion_node</strong> - Talks to the GPS hat by using serial USB</li>
+<li><strong>cell_node</strong> - Configures the cellular module and parses connection statistics</li>
+</ul>
+<p>In order to record data from all the nodes, we use ROS Bag, a program which collects all the data passing between the nodes and logs them. These logs can then be later replayed, converted into a .csv, or analyzed with Foxglove.</p>
+<p>We also have <abbr title="Built using Flutter, the driver dashboard deployed directly on the boat">TidalView</abbr>, the driver dashboard deployed on the boat. In order to parse the data in ROS, we use <abbr title="Converts ROS2 messages into normal JSON which is used by TidalView">ROSBridge</abbr>, a program which converts the ROS data into JSON which can be parsed by <abbr title="Built using Flutter, the driver dashboard deployed directly on the boat">TidalView</abbr>. </p>
+<p>Finally, we also have the <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> subsystem. We use a USB-to-<abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> device from <abbr title="The USB-to-CAN adapter used by TidalCore">Kvaser</abbr>, which allows us to use Linux's SocketCAN implementation. SocketCAN allows us to treat the <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> bus as a normal network interface, greatly simplifying the implementation of <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> in software.</p>
 
 
 
