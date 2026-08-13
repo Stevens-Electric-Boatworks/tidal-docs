@@ -1,5 +1,5 @@
 site_name: Tidal Telemetry Documentation
-site_url: https://docs.stevenseboat.org
+site_url: https://stevens-electric-boatworks.github.io/tidal-docs/
 theme:
   name: material
   features:
