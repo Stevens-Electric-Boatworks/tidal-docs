@@ -9,12 +9,12 @@ author: Ishaan Sayal
 
 **TidalCore** is the core of the control system, and is responsible for handling shore up-link, CAN communications to the motor controller and battery management system, data logging, fault management, GPS communication, cellular configuration, and much more. All data from the boat originates from TidalCore, and the rest of the control system cannot function without it. 
 
-The goal of this article is to familiarize you with some of the key concepts and ideas, and also provide a context onto why specific choices were made. The actual setup/programming is located at [TODO].
+The goal of this article is to familiarize you with some of the key concepts and ideas, and also provide a context onto why specific choices were made. The actual setup/programming is located at [the setup guides](../../dev-setup/prerequisites).
 
 !!! tip
 	This documentation mirrors the official ROS2 documentation about its architecture (duh, since we use ROS2). It is a good idea to [read the official documentation](https://docs.ros.org/en/kilted/Concepts/Basic.html) on its basic concepts along with this one. You will be using ROS2 a lot, so it is best to get used to reading its documentation early.
 ## Nodes
-TidalCore is built with a distributed architecture that prevents single points of failures. This means that even if there is a single bad node which crashes, it does not result in the entire failure of the entire control system, a strict requirement for a system which cannot be easily debugged or rebooted once in the field (or the water). 
+TidalCore is built with a distributed architecture that prevents single points of failures. This means that even if there is a single bad node which crashes, it does not result in the entire failure of the entire control system, a strict requirement for a system which cannot be easily debugged or rebooted.
 
 This also drives our choice to use ROS2 (Robot Operating System). ROS2 works in a node architecture, which means that each portion of the control system (CAN communication, GPS, shore up-link, etc), are all separate "nodes" or processes. What this means is that if there is a failure in one node (e.g, a parsing bug in the GPS node results in a crash), it will not affect the other portions of the control system, such as CAN communication, shore up-link, etc. This is a much more robust design compared to a monolithic structure, where all of the code is sitting inside 1 process, and any failure in any part of the code will result in a full control system failure. 
 
