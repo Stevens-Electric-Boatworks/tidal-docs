@@ -77,6 +77,7 @@ nav:
     - TidalCore: dev-setup/tidalcore.md
     - TidalView: dev-setup/tidalview.md
     - TidalShore: dev-setup/tidalshore.md
+    - TidalDocs: dev-setup/tidaldocs.md
   - TidalCore:
     - CAN Bus: tidalcore/can-bus.md
     - Networking Configuration: tidalcore/networking-configuration.md
