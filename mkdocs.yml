@@ -7,6 +7,10 @@ theme:
     - navigation.footer
     - toc.integrate
     - toc.follow  
+    - content.tooltips
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
 
   palette:
     primary: custom
@@ -20,6 +24,14 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+watch:
+  - includes
+
+plugins:
+  - search
+  - open-in-new-tab:
+     add_icon: true
+
 markdown_extensions:
   - toc:
       permalink: true
@@ -27,6 +39,19 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.blocks.caption
+  - abbr
+  - attr_list
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
 
 extra:
   social:
@@ -42,11 +67,17 @@ nav:
   - Home:
     - Introduction: index.md
     - Features: features.md
-  - Start Here:
-    - Intro to Tidal Telemetry: start-here/welcome.md
-    - Overall System Design: start-here/overall-system-design.md
-    - TidalCore: start-here/tidalcore.md
-    - TidalView: start-here/tidalview.md
+  - Introduction (Start Here):
+    - Intro to Tidal Telemetry: intro/welcome.md
+    - Overall System Design: intro/overall-system-design.md
+    - TidalCore: intro/tidalcore.md
+    - TidalView: intro/tidalview.md
+  - Developer Setup:
+    - Prerequisites: dev-setup/prerequisites.md
+    - TidalCore: dev-setup/tidalcore.md
+    - TidalView: dev-setup/tidalview.md
+    - TidalShore: dev-setup/tidalshore.md
+    - TidalDocs: dev-setup/tidaldocs.md
   - TidalCore:
     - CAN Bus: tidalcore/can-bus.md
     - Networking Configuration: tidalcore/networking-configuration.md
@@ -54,3 +85,11 @@ nav:
     - Fault Management System (TODO): tidalcore/fault-management-system.md
     - Deploying Code Remotely (TODO): tidalcore/deploying-code.md
     - Data Recording (TODO): tidalcore/data-recording.md
+  - TidalShore [todo]:
+    - TODO: todo
+  - TidalView [todo]:
+    - TODO: todo
+  - Website ↗: https://stevenseboat.org
+  - GitHub ↗: https://github.com/Stevens-Electric-Boatworks
+  - ROS Documenation ↗: https://docs.ros.org/en/kilted/Tutorials.html
+  
