@@ -43,6 +43,9 @@ You can now open the project directory in Android Studio, and you should be buil
 
 ## Step 4: ROSBridge Setup
 
+!!! note
+	You need to follow the TidalCore prerequisite quite and installation guide in order to use ROSBridge.
+
 While optional, this step is highly recommended so you can test your code with data from TidalCore/ROS2. To install ROSBridge, enter your sourced environment (whether this be via a container, WSL2, etc.), and run:
 ```bash title="bash"
 sudo apt-get install -y ros-kilted-rosbridge-server
