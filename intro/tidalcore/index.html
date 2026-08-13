@@ -260,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tidalcore/can-bus/" class="md-tabs__link">
+        <a href="../../tidalcore/tidalcore/" class="md-tabs__link">
           
   
   
@@ -1065,6 +1065,120 @@
   
   
     <li class="md-nav__item">
+      <a href="../../tidalcore/tidalcore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TidalCore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS Node Breakdowns
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ROS Node Breakdowns
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tidalcore/node-breakdown/shore_comms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    shore_comms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../tidalcore/can-bus/" class="md-nav__link">
         
   
@@ -1517,13 +1631,13 @@
 
 <p><img alt="" src="../../assets/images/tidalcore_logo.png" /></p>
 <p><strong><abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr></strong> is the core of the control system, and is responsible for handling shore up-link, <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> communications to the motor controller and battery management system, data logging, fault management, GPS communication, cellular configuration, and much more. All data from the boat originates from <abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr>, and the rest of the control system cannot function without it. </p>
-<p>The goal of this article is to familiarize you with some of the key concepts and ideas, and also provide a context onto why specific choices were made. The actual setup/programming is located at <a href="../../dev-setup/prerequisites">the setup guides</a>.</p>
+<p>The goal of this article is to familiarize you with some of the key concepts and ideas, and also provide a context onto why specific choices were made. The actual setup/programming is located at [TODO].</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>This documentation mirrors the official <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> documentation about its architecture (duh, since we use <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr>). It is a good idea to <a href="https://docs.ros.org/en/kilted/Concepts/Basic.html">read the official documentation</a> on its basic concepts along with this one. You will be using <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> a lot, so it is best to get used to reading its documentation early.</p>
 </div>
 <h2 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h2>
-<p><abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> is built with a distributed architecture that prevents single points of failures. This means that even if there is a single bad node which crashes, it does not result in the entire failure of the entire control system, a strict requirement for a system which cannot be easily debugged or rebooted.</p>
+<p><abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> is built with a distributed architecture that prevents single points of failures. This means that even if there is a single bad node which crashes, it does not result in the entire failure of the entire control system, a strict requirement for a system which cannot be easily debugged or rebooted once in the field (or the water). </p>
 <p>This also drives our choice to use <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> (Robot Operating System). <abbr title="Robot Operating System 2, the framework that TidalCore is built on top of">ROS2</abbr> works in a node architecture, which means that each portion of the control system (<abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> communication, GPS, shore up-link, etc), are all separate "nodes" or processes. What this means is that if there is a failure in one node (e.g, a parsing bug in the GPS node results in a crash), it will not affect the other portions of the control system, such as <abbr title="Controller Area Network, the communication standard used by the motor controllers, BMS, and cooling sensors">CAN</abbr> communication, shore up-link, etc. This is a much more robust design compared to a monolithic structure, where all of the code is sitting inside 1 process, and any failure in any part of the code will result in a full control system failure. </p>
 <p><abbr title="Built on ROS2, the software running directly on the boat">TidalCore</abbr> currently has the following nodes:</p>
 <ul>
