@@ -2,3 +2,16 @@
   --md-primary-fg-color: #9C1B37;
   --md-accent-fg-color: #46423E;
 }
+.md-header__topic:not([data-md-component]) {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.md-header__topic:not([data-md-component]) .md-ellipsis::after {
+  content: "by Stevens Electric Boatworks";
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: rgba(178, 178, 178, 1);
+  white-space: nowrap;
+}

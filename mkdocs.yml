@@ -1,4 +1,4 @@
-site_name: Tidal Telemetry Documentation
+site_name: Tidal Telemetry
 site_url: https://stevens-electric-boatworks.github.io/tidal-docs/
 theme:
   name: material
