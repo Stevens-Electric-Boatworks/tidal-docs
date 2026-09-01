@@ -1,79 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/features/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/features/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/dev-setup/prerequisites/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/dev-setup/prerequisites/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/dev-setup/tidalcore/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/dev-setup/tidalcore/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/dev-setup/tidaldocs/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/dev-setup/tidaldocs/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/dev-setup/tidalview/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/dev-setup/tidalview/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/intro/system-design/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/intro/system-design/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/intro/tidalcore/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/intro/tidalcore/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/intro/tidalshore/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/intro/tidalshore/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/intro/tidalview/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/intro/tidalview/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/intro/welcome/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/intro/welcome/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/can-bus/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/tidalcore/can-bus/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/data-recording/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/tidalcore/data-recording/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/deploying-code/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/tidalcore/deploying-code/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/fault-management-system/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/tidalcore/fault-management-system/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/networking-configuration/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/tidalcore/networking-configuration/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
     <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/shore-protocol/</loc>
-         <lastmod>2026-08-13</lastmod>
-    </url>
-    <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/tidalcore/</loc>
-         <lastmod>2026-08-13</lastmod>
-    </url>
-    <url>
-         <loc>https://stevens-electric-boatworks.github.io/tidal-docs/tidalcore/node-breakdown/shore_comms/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <loc>https://docs.stevenseboat.org/tidalcore/shore-protocol/</loc>
+         <lastmod>2026-09-01</lastmod>
     </url>
 </urlset>
